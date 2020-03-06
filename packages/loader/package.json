@@ -1,0 +1,40 @@
+{
+  "name": "@comingsoonseries/loader",
+  "version": "1.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "Attilio Urbani <attiliourb@gmail.com>",
+  "license": "ISC",
+  "directories": {
+    "test": "__tests__"
+  },
+  "main": "dist/main",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./dist && rm -rf tsconfig.build.tsbuildinfo",
+    "compile": "tsc -b tsconfig.build.json"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.3.3",
+    "@types/node": "^8.0.29"
+  },
+  "dependencies": {
+    "@comingsoonseries/core": "^1.0.0",
+    "@nestjs/common": "^6.11.11",
+    "@nestjs/core": "^6.11.11",
+    "class-validator": "^0.10.0",
+    "dotenv": "^8.1.0",
+    "mongodb": "^3.0.8",
+    "observable-fs": "^2.1.4",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "0.2.19"
+  }
+}

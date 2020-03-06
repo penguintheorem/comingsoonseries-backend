@@ -1,0 +1,32 @@
+{
+  "name": "@comingsoonseries/auth",
+  "version": "1.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "Attilio Urbani <attiliourb@gmail.com>",
+  "license": "ISC",
+  "directories": {
+    "test": "__tests__"
+  },
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./dist && rm -rf tsconfig.build.tsbuildinfo",
+    "compile": "tsc -b tsconfig.build.json"
+  },
+  "dependencies": {
+    "@comingsoonseries/common": "^1.0.0",
+    "@nest-modules/mailer": "^1.1.3",
+    "@nestjs/passport": "^6.2.0",
+    "passport": "^0.4.1",
+    "jwks-rsa": "^1.7.0",
+    "passport-jwt": "^4.0.0"
+  }
+}
