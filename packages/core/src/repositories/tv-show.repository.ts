@@ -17,14 +17,10 @@ import {
 import { TvShowPoster } from '../models/dtos/tv-show-poster.dto';
 import { MongoRepositoryManager } from './mongo-repository-manager';
 import { Injectable } from '@nestjs/common';
-import { TvShowsService } from '../services/tv-shows.service';
 
 @Injectable()
 export class TvShowRepository {
-  constructor(
-    private readonly _manager: MongoRepositoryManager,
-    private readonly tvShowsService: TvShowsService,
-  ) {}
+  constructor(private readonly _manager: MongoRepositoryManager) {}
 
   add(tvShow: TvShow): Observable<TvShow> {
     return this._manager.getRepository<TvShow>(TvShow).pipe(
@@ -67,9 +63,7 @@ export class TvShowRepository {
           }),
         ),
       ),
-      map((tvShows: TvShow[]) =>
-        this.tvShowsService.toTvShowSuggestions(tvShows),
-      ),
+      map((tvShows: TvShow[]) => this.toTvShowSuggestions(tvShows)),
     );
   }
 
@@ -146,9 +140,7 @@ export class TvShowRepository {
           }),
         ),
       ),
-      map((tvShows: TvShow[]) =>
-        this.tvShowsService.toTvShowGridItems(tvShows),
-      ),
+      map((tvShows: TvShow[]) => this.toTvShowGridItems(tvShows)),
     );
   }
 
@@ -178,7 +170,7 @@ export class TvShowRepository {
   }
 
   addFromDto(tvShowDTO: TvShowDTO): void {
-    this.add(this.tvShowsService.getEntityFromDTO(tvShowDTO));
+    this.add(this.getEntityFromDTO(tvShowDTO));
   }
 
   async load(tvShowDTOs: TvShowDTO[]): Promise<void> {
@@ -186,9 +178,65 @@ export class TvShowRepository {
       const c = await getConnection();
       const repo = c.getRepository(TvShow);
 
-      await repo.save(this.tvShowsService.getEntitiesFromDTOs(tvShowDTOs));
+      await repo.save(this.getEntitiesFromDTOs(tvShowDTOs));
     } catch (e) {
       console.error(`err: ${e}`);
     }
+  }
+
+  /**
+   *
+   * @param tvShows
+   */
+  toTvShowSuggestions(tvShows: TvShow[]): TvShowSuggestion[] {
+    return tvShows.map(tvShow => {
+      return {
+        id: tvShow.id.toString(),
+        title: tvShow.title,
+        plot: tvShow.plot,
+        release_year: tvShow.release_year,
+        imdb_average_rank: tvShow.imdb_average_rank,
+      };
+    });
+  }
+
+  toTvShowGridItems(tvShows: TvShow[]): TvShowPoster[] {
+    return tvShows.map(tvShow => {
+      return {
+        id: tvShow.id.toString(),
+        title: tvShow.title,
+        networks: tvShow.networks,
+        poster: tvShow.poster,
+      };
+    });
+  }
+
+  getEntityFromDTO(tvShowDTO: TvShowDTO): TvShow {
+    const tvShow: TvShow = new TvShow();
+
+    tvShow.imdb_id = tvShowDTO.tconst;
+    tvShow.title = tvShowDTO.primaryTitle;
+    tvShow.release_year = tvShowDTO.startYear;
+    tvShow.genres = tvShowDTO.genres;
+    tvShow.isAdult = tvShowDTO.isAdult;
+    tvShow.minutes = tvShowDTO.runtimeMinutes;
+    tvShow.imdb_average_rank = tvShowDTO.imdb_average_rank;
+    tvShow.imdb_num_votes = tvShowDTO.imdb_num_votes;
+    tvShow.country = tvShowDTO.country;
+    tvShow.next_release_date = null;
+    tvShow.trailer = null;
+    tvShow.plot = null;
+    tvShow.poster = null;
+    tvShow.cover = null;
+    tvShow.directors = [];
+    tvShow.networks = [];
+    tvShow.products = [];
+    tvShow.countLists = 0;
+
+    return tvShow;
+  }
+
+  getEntitiesFromDTOs(tvShowDTOs: TvShowDTO[]): TvShow[] {
+    return tvShowDTOs.map(this.getEntityFromDTO);
   }
 }

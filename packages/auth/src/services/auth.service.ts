@@ -15,6 +15,7 @@ export class AuthService {
     console.log('sign-in user: ', user);
     return this.auth0Service.getToken(user).pipe(
       catchError(error => {
+        console.log('error: ', error);
         return throwError(ErrorUtils.formatAuth0Exception(error));
       }),
       tap(response => console.log(`the sign-in is fucking successful`)),

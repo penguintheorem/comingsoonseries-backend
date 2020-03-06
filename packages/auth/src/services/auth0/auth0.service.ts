@@ -25,10 +25,11 @@ export class Auth0Service {
   private readonly POST_VERIFICATION_REDIRECT_URL = 'http://localhost:4200';
 
   private readonly DEFAULT_OPTIONS: Auth0Options = {
-    grant_type: 'password',
+    grant_type: 'http://auth0.com/oauth/grant-type/password-realm',
     audience: this.AUDIENCE,
     scope: 'SCOPE',
-    realm: 'email',
+    realm: this.CONNECTION,
+    // realm: 'email',
     client_id: this.CLIENT_ID,
     client_secret: this.CLIENT_SECRET,
   };
@@ -37,7 +38,13 @@ export class Auth0Service {
   constructor(
     private readonly httpService: HttpService,
     private readonly mailerService: MailerService,
-  ) {}
+  ) {
+    console.log(`DOMAIN:${this.DOMAIN}`);
+    console.log(`AUDIENCE:${this.AUDIENCE}`);
+    console.log(`CLIENT_ID:${this.CLIENT_ID}`);
+    console.log(`CLIENT_SECRET:${this.CLIENT_SECRET}`);
+    console.log(`CONNECTION:${this.CONNECTION}`);
+  }
 
   getToken(user: User): Observable<AxiosResponse<GetTokenResponse>> {
     const headers = { 'Content-Type': 'application/x-www-form-urlencoded' };

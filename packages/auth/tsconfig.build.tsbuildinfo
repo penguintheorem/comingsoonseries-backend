@@ -1710,11 +1710,11 @@
         "signature": "836830aceb534f74d0c983f662ee1a9e42200cd5e440986a159d3d5774b6d4ab"
       },
       "./src/services/auth0/auth0.service.ts": {
-        "version": "716aaf767e99ee7faa9e5de969af0594d56a760bac2b39909f02f15bbc68b502",
+        "version": "80987c4ef9de3fe1cb33ae9d10b7c27d6d7128a02006e7c6d8ee17b5a2c7538d",
         "signature": "35dab3a32d4f9332b938f0368d1f2471314ba158061d8e2092e35fdc01f70b6f"
       },
       "./src/services/auth.service.ts": {
-        "version": "bca56c7b9283a6580779471011ed1a8ac02f146e87935eabdfa3af4047b81e6d",
+        "version": "ba83e8f568301cf812505cec66c678a0d744470e974744180bb5ad4ba0839513",
         "signature": "d7e3ff8c15d506478d1c09b7031da5b728e9b2eb7c339ce39e7d5319f426630d"
       },
       "./node_modules/@types/express/index.d.ts": {

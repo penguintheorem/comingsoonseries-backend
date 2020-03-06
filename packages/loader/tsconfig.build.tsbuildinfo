@@ -1945,17 +1945,21 @@
         "version": "192f1382d372150a9ee00ec4e9fc1b264ad283cf9bd88f077089ec91878287d6",
         "signature": "192f1382d372150a9ee00ec4e9fc1b264ad283cf9bd88f077089ec91878287d6"
       },
+      "../core/dist/models/tv-show-short-info.d.ts": {
+        "version": "c2d667c24b71ebd5709a679effdda4ee82b65a77c6f36483d3411e656511ea8e",
+        "signature": "c2d667c24b71ebd5709a679effdda4ee82b65a77c6f36483d3411e656511ea8e"
+      },
       "../core/dist/models/index.d.ts": {
-        "version": "28d7683fe6588957a4b6367c5a71b0feb6f4e6f39e436060f7d92a585e07169c",
-        "signature": "28d7683fe6588957a4b6367c5a71b0feb6f4e6f39e436060f7d92a585e07169c"
+        "version": "044d172257796c15e7240522f91d777b7dc156dac6a55f198a47c427844f2b2d",
+        "signature": "044d172257796c15e7240522f91d777b7dc156dac6a55f198a47c427844f2b2d"
       },
       "../core/dist/entities/tv-show.entity.d.ts": {
         "version": "d7e2508d3326b0286e7cc13505f4d171f7def4fb2c4755af574b1c2cc9a76e7c",
         "signature": "d7e2508d3326b0286e7cc13505f4d171f7def4fb2c4755af574b1c2cc9a76e7c"
       },
       "../core/dist/repositories/tv-show.repository.d.ts": {
-        "version": "34079ed153540a101b8a39029fb13ed85be6e72f9dca37ef39c6d6abe195d0b1",
-        "signature": "34079ed153540a101b8a39029fb13ed85be6e72f9dca37ef39c6d6abe195d0b1"
+        "version": "8513b66ebf10974daed7cefbd9e3bf33bf7e5a3a7aff624f3c32971fedbd1552",
+        "signature": "8513b66ebf10974daed7cefbd9e3bf33bf7e5a3a7aff624f3c32971fedbd1552"
       },
       "../core/dist/repositories/index.d.ts": {
         "version": "e63196dffc0989c4c613b193f810404e1f552fd592027e308738e1abfe2d6824",
@@ -5865,6 +5869,10 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
+      "../core/dist/models/tv-show-short-info.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
       "../core/dist/models/index.d.ts": [
         "../core/dist/models/dtos/tv-show.dto.d.ts",
         "../core/dist/models/dtos/tv-show-poster.dto.d.ts",
@@ -5875,6 +5883,7 @@
         "../core/dist/models/ordering-mode.d.ts",
         "../core/dist/models/pagination-params.d.ts",
         "../core/dist/models/sorting-params.d.ts",
+        "../core/dist/models/tv-show-short-info.d.ts",
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -9494,6 +9503,11 @@
         "../core/dist/models/ordering-mode.d.ts",
         "../core/dist/models/pagination-params.d.ts",
         "../core/dist/models/sorting-params.d.ts",
+        "../core/dist/models/tv-show-short-info.d.ts",
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/tv-show-short-info.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -11887,6 +11901,7 @@
       "../core/dist/models/ordering-mode.d.ts",
       "../core/dist/models/pagination-params.d.ts",
       "../core/dist/models/sorting-params.d.ts",
+      "../core/dist/models/tv-show-short-info.d.ts",
       "../core/dist/models/index.d.ts",
       "../core/dist/entities/tv-show.entity.d.ts",
       "../core/dist/repositories/tv-show.repository.d.ts",
