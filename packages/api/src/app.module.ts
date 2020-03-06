@@ -6,10 +6,11 @@ import { Module } from '@nestjs/common';
 import { AuthModule } from '@comingsoonseries/auth/auth.module';
 import { CoreModule } from '@comingsoonseries/core/core.module';
 import { AuthController } from './controllers/auth.controller';
+import { BoController } from './controllers/bo/bo.controller';
 
 @Module({
   imports: [AuthModule, CoreModule],
-  controllers: [TvShowsController, AuthController],
+  controllers: [TvShowsController, AuthController, BoController],
   providers: [
     {
       provide: APP_INTERCEPTOR,

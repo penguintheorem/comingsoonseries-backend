@@ -7,3 +7,4 @@ export * from './filters';
 export * from './ordering-mode';
 export * from './pagination-params';
 export * from './sorting-params';
+export * from './tv-show-short-info';
