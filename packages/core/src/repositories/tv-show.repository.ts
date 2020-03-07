@@ -104,7 +104,6 @@ export class TvShowRepository {
     const ordering = 'DESC';
 
     return this._manager.getRepository<TvShow>(TvShow).pipe(
-      tap(repo => console.log('connection established')),
       switchMap(repo =>
         from(
           repo.find({

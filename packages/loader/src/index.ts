@@ -14,7 +14,6 @@ dotenv.config();
   // init DB Connection
   RepositoryManager.getConnection().subscribe(
     conn => {
-      console.log(`connection ${conn.name} established`);
       loader.load();
     },
     err => {

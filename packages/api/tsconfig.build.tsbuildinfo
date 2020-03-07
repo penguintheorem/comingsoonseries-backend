@@ -1438,8 +1438,8 @@
         "signature": "5741269a9052f0d759f5b3132f1bc094944abfcfefb824731f4ca3d5121567d8"
       },
       "../core/dist/services/tv-shows.service.d.ts": {
-        "version": "28df28c5f4254a37d4272e843dc9b7805b7d0c666bd51db6999bc36606c4cc91",
-        "signature": "28df28c5f4254a37d4272e843dc9b7805b7d0c666bd51db6999bc36606c4cc91"
+        "version": "8a0a377fce8132aa35cb5e58442b5b5ab0bbeeda4113d34a2d289acfec96651d",
+        "signature": "8a0a377fce8132aa35cb5e58442b5b5ab0bbeeda4113d34a2d289acfec96651d"
       },
       "../core/dist/services/index.d.ts": {
         "version": "718bca507bf0f83d189e71c308bb0eb30a1b6df9e482d38ed8997a2f9df0cf5d",
@@ -6221,6 +6221,7 @@
         "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts",
         "../core/dist/models/dtos/tv-show-poster.dto.d.ts",
         "../core/dist/entities/index.d.ts",
+        "../core/dist/models/tv-show-short-info.d.ts",
         "../../node_modules/@types/node/fs.d.ts",
         "../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../node_modules/@types/node/util.d.ts",
@@ -10981,6 +10982,7 @@
         "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts",
         "../core/dist/models/dtos/tv-show-poster.dto.d.ts",
         "../core/dist/entities/index.d.ts",
+        "../core/dist/models/tv-show-short-info.d.ts",
         "../../node_modules/@types/node/fs.d.ts",
         "../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../node_modules/@types/node/util.d.ts",

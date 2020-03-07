@@ -9,6 +9,7 @@ import { OrderingMode } from '../models/ordering-mode';
 import { TvShowSuggestion } from '../models/dtos/tv-show-suggestion.dto';
 import { TvShowPoster } from '../models/dtos/tv-show-poster.dto';
 import { TvShow } from '../entities';
+import { TvShowShortInfo } from '../models/tv-show-short-info';
 
 @Injectable()
 export class TvShowsService {
@@ -23,7 +24,6 @@ export class TvShowsService {
     filters: Filters,
     sortingParams: SortingParams,
   ): Observable<TvShowPoster[]> {
-    console.log({ paginationParams, filters, sortingParams });
     return this.tvShowRepository.getTvShowPosters(
       paginationParams,
       filters,
@@ -61,6 +61,9 @@ export class TvShowsService {
 
   getSuggestions(searchTerm: string): Observable<TvShowSuggestion[]> {
     return this.tvShowRepository.getSuggestions(searchTerm);
+  }
+  getTvShowShortInfos(searchTerm: string): Observable<TvShowShortInfo[]> {
+    return this.tvShowRepository.getTvShowsShortInfo(searchTerm);
   }
 
   getProducts(tvShowId: string): Observable<Product[]> {

@@ -38,13 +38,7 @@ export class Auth0Service {
   constructor(
     private readonly httpService: HttpService,
     private readonly mailerService: MailerService,
-  ) {
-    console.log(`DOMAIN:${this.DOMAIN}`);
-    console.log(`AUDIENCE:${this.AUDIENCE}`);
-    console.log(`CLIENT_ID:${this.CLIENT_ID}`);
-    console.log(`CLIENT_SECRET:${this.CLIENT_SECRET}`);
-    console.log(`CONNECTION:${this.CONNECTION}`);
-  }
+  ) {}
 
   getToken(user: User): Observable<AxiosResponse<GetTokenResponse>> {
     const headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
@@ -83,7 +77,6 @@ export class Auth0Service {
     userId: string,
     userEmail: string,
   ): Observable<string> {
-    console.log(`ask for email verification to: ${userId}`);
     return this.httpService
       .post<string>(
         `${this.DOMAIN}/${this.GET_TICKET_ENDPOINT}`,
