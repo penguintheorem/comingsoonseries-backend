@@ -1,3 +1,5 @@
+import { DraftsRepository } from './repositories/drafts.repository';
+import { DraftsService } from './services/drafts.service';
 import { ErrorsInterceptor } from './interceptors/errors.interceptor';
 import { HttpExceptionFilter } from './filters/http-exception.filter';
 import { APP_INTERCEPTOR, APP_FILTER } from '@nestjs/core';
@@ -10,6 +12,8 @@ import { MongoRepositoryManager, TvShowRepository } from './repositories';
     MongoRepositoryManager,
     TvShowRepository,
     TvShowsService,
+    DraftsService,
+    DraftsRepository,
     {
       provide: APP_INTERCEPTOR,
       useClass: ErrorsInterceptor,
@@ -19,6 +23,11 @@ import { MongoRepositoryManager, TvShowRepository } from './repositories';
       useClass: HttpExceptionFilter,
     },
   ],
-  exports: [MongoRepositoryManager, TvShowRepository, TvShowsService],
+  exports: [
+    MongoRepositoryManager,
+    TvShowRepository,
+    TvShowsService,
+    DraftsService,
+  ],
 })
 export class CoreModule {}

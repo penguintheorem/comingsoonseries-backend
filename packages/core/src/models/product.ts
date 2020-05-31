@@ -1,18 +1,24 @@
-import { Column } from "typeorm";
+import { Column } from 'typeorm';
 
 export class Product {
   @Column()
-  product_name: string;
+  productId: string;
+
+  @Column()
+  name: string;
 
   @Column()
   product_desc: string;
 
   @Column()
-  product_price: number;
+  price: number;
 
   @Column()
-  product_link: string;
+  link: string;
 
   @Column()
-  path: string;
+  image: string;
+
+  @Column()
+  retailer?: string;
 }

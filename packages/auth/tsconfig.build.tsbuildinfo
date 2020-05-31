@@ -1710,11 +1710,11 @@
         "signature": "836830aceb534f74d0c983f662ee1a9e42200cd5e440986a159d3d5774b6d4ab"
       },
       "./src/services/auth0/auth0.service.ts": {
-        "version": "80987c4ef9de3fe1cb33ae9d10b7c27d6d7128a02006e7c6d8ee17b5a2c7538d",
+        "version": "384377e4fe633653eab4d14a1755470ae07311ed70fff3ec50b0dfdba4dd52b1",
         "signature": "35dab3a32d4f9332b938f0368d1f2471314ba158061d8e2092e35fdc01f70b6f"
       },
       "./src/services/auth.service.ts": {
-        "version": "ba83e8f568301cf812505cec66c678a0d744470e974744180bb5ad4ba0839513",
+        "version": "34f90e3fce3ab59c13ef15f431007fc24d221c455af390a93d11bdf2665258da",
         "signature": "d7e3ff8c15d506478d1c09b7031da5b728e9b2eb7c339ce39e7d5319f426630d"
       },
       "./node_modules/@types/express/index.d.ts": {
@@ -1734,7 +1734,7 @@
         "signature": "b4f995dd33be0b47a7536a2f0cab91b2bcc7aecb303dfb18da7397e214e2fae0"
       },
       "./src/services/jwt-strategy.ts": {
-        "version": "61efb5b1202e37019f66422540aa295bb8c286d38ecd72fc28fdfa8ca2921280",
+        "version": "38afe68cfe07b78648fc2f37d20057f793c06d6cc648ef641332fc5e7fa2b8d1",
         "signature": "091926afa9777661defd6e0454252e3b111c53011430e2a91d0effd8b5d9f9ec"
       },
       "./src/auth.module.ts": {
@@ -1900,6 +1900,26 @@
       "../../node_modules/@types/yargs/index.d.ts": {
         "version": "6055ac126cf1a6c818330d033eb3e99df5070a598359fe30c430f844dafac7ce",
         "signature": "6055ac126cf1a6c818330d033eb3e99df5070a598359fe30c430f844dafac7ce"
+      },
+      "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": {
+        "version": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89",
+        "signature": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89"
+      },
+      "../../../../../../node_modules/@types/node-fetch/externals.d.ts": {
+        "version": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
+        "signature": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73"
+      },
+      "../../../../../../node_modules/@types/node-fetch/index.d.ts": {
+        "version": "f51382950fa81e3a54e9fd9f343fe583cfbb221f15a51936e12411699347effe",
+        "signature": "f51382950fa81e3a54e9fd9f343fe583cfbb221f15a51936e12411699347effe"
+      },
+      "../../../../../../node_modules/@types/prettier/index.d.ts": {
+        "version": "29651525db5579157e617c77e869af8bfdc1130f5d811c1f759ad35b7bafc8ef",
+        "signature": "29651525db5579157e617c77e869af8bfdc1130f5d811c1f759ad35b7bafc8ef"
+      },
+      "../../../../../../node_modules/@types/tunnel/index.d.ts": {
+        "version": "166bfd32f444e0505b9dfcccce99a2c99f04fba1f1e232e93a8ff72660973a87",
+        "signature": "166bfd32f444e0505b9dfcccce99a2c99f04fba1f1e232e93a8ff72660973a87"
       }
     },
     "options": {
@@ -5805,6 +5825,46 @@
         "./node_modules/@types/node/ts3.2/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": [
+        "./node_modules/@types/node/stream.d.ts",
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/externals.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/index.d.ts": [
+        "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts",
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/@types/node/url.d.ts",
+        "../../../../../../node_modules/@types/node-fetch/externals.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../../../node_modules/@types/prettier/index.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../../../node_modules/@types/tunnel/index.d.ts": [
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -8565,6 +8625,34 @@
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/util.d.ts"
       ],
+      "../../../../../../node_modules/@types/tunnel/index.d.ts": [
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/index.d.ts": [
+        "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts",
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/@types/node/url.d.ts",
+        "../../../../../../node_modules/@types/node-fetch/externals.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": [
+        "./node_modules/@types/node/stream.d.ts",
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../node_modules/@types/webpack/index.d.ts": [
         "../../node_modules/@types/tapable/index.d.ts",
         "../../node_modules/@types/uglify-js/index.d.ts",
@@ -8979,6 +9067,18 @@
         "./node_modules/@types/node/stream.d.ts",
         "./node_modules/@types/node/events.d.ts",
         "./node_modules/@types/node/url.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../../../node_modules/@types/prettier/index.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.2/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/externals.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.2/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
@@ -10076,6 +10176,11 @@
       "../../node_modules/@types/webpack/index.d.ts",
       "../../node_modules/@types/yargs-parser/index.d.ts",
       "../../node_modules/@types/yargs/index.d.ts",
+      "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts",
+      "../../../../../../node_modules/@types/node-fetch/externals.d.ts",
+      "../../../../../../node_modules/@types/node-fetch/index.d.ts",
+      "../../../../../../node_modules/@types/prettier/index.d.ts",
+      "../../../../../../node_modules/@types/tunnel/index.d.ts",
       "../../node_modules/typescript/lib/lib.es2015.d.ts",
       "../../node_modules/typescript/lib/lib.es2016.d.ts",
       "../../node_modules/typescript/lib/lib.es2017.d.ts",

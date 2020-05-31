@@ -1909,57 +1909,65 @@
         "version": "7de85b824b97082716944b250675dba24963073bdbc770a50b02cd3c83985439",
         "signature": "7de85b824b97082716944b250675dba24963073bdbc770a50b02cd3c83985439"
       },
-      "../core/dist/models/dtos/tv-show.dto.d.ts": {
-        "version": "1a1906c1719ac99121678a25dbd5662e555bcde8ad0d34725620791011867f75",
-        "signature": "1a1906c1719ac99121678a25dbd5662e555bcde8ad0d34725620791011867f75"
-      },
-      "../core/dist/models/dtos/tv-show-poster.dto.d.ts": {
-        "version": "7353ec178516b5a6ab84b4521a736936876cc315d3e2263f07025dd435acac5a",
-        "signature": "7353ec178516b5a6ab84b4521a736936876cc315d3e2263f07025dd435acac5a"
-      },
-      "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts": {
-        "version": "886f1d7aa9034c0c00a87d186372fa0ad912b71049b559b27e594c091bbc216e",
-        "signature": "886f1d7aa9034c0c00a87d186372fa0ad912b71049b559b27e594c091bbc216e"
-      },
-      "../core/dist/models/product.d.ts": {
-        "version": "a0188dd3798801efd8ecdcb191353054d8072df0127710993aed8cf10caf6b95",
-        "signature": "a0188dd3798801efd8ecdcb191353054d8072df0127710993aed8cf10caf6b95"
-      },
-      "../core/dist/models/sponsored-tv-shows-lists.d.ts": {
-        "version": "49ce704694cadb3b281e1d1ba40cac54a359a4f4f075abcff15105e38ed475d3",
-        "signature": "49ce704694cadb3b281e1d1ba40cac54a359a4f4f075abcff15105e38ed475d3"
-      },
       "../core/dist/models/filters.d.ts": {
         "version": "12fc1f98fe613023f779a05d8c72162606e2109aecebe44244a561144bfb7c86",
         "signature": "12fc1f98fe613023f779a05d8c72162606e2109aecebe44244a561144bfb7c86"
-      },
-      "../core/dist/models/ordering-mode.d.ts": {
-        "version": "8de27fb04dcd1d7d6fb41d8f9e0abc2ce0ad294fec94fe5d579868e16b690784",
-        "signature": "8de27fb04dcd1d7d6fb41d8f9e0abc2ce0ad294fec94fe5d579868e16b690784"
-      },
-      "../core/dist/models/pagination-params.d.ts": {
-        "version": "40c9236a10e19498ca7d6dd2c9f7c65787b9390c7b061c5aa0d307e320e20503",
-        "signature": "40c9236a10e19498ca7d6dd2c9f7c65787b9390c7b061c5aa0d307e320e20503"
-      },
-      "../core/dist/models/sorting-params.d.ts": {
-        "version": "192f1382d372150a9ee00ec4e9fc1b264ad283cf9bd88f077089ec91878287d6",
-        "signature": "192f1382d372150a9ee00ec4e9fc1b264ad283cf9bd88f077089ec91878287d6"
       },
       "../core/dist/models/tv-show-short-info.d.ts": {
         "version": "c2d667c24b71ebd5709a679effdda4ee82b65a77c6f36483d3411e656511ea8e",
         "signature": "c2d667c24b71ebd5709a679effdda4ee82b65a77c6f36483d3411e656511ea8e"
       },
+      "../core/dist/models/product.d.ts": {
+        "version": "74e531a5fc00cc8742fcdd5908f2024f6f6f81dcf4b85703d4acb7c681e24a4f",
+        "signature": "74e531a5fc00cc8742fcdd5908f2024f6f6f81dcf4b85703d4acb7c681e24a4f"
+      },
+      "../core/dist/models/pagination-metadata.d.ts": {
+        "version": "29b2013dd609fc146a4f8fe58811282c5b5285ff0b44ad6dd2434bef624e47a5",
+        "signature": "29b2013dd609fc146a4f8fe58811282c5b5285ff0b44ad6dd2434bef624e47a5"
+      },
+      "../core/dist/models/ordering-mode.d.ts": {
+        "version": "8de27fb04dcd1d7d6fb41d8f9e0abc2ce0ad294fec94fe5d579868e16b690784",
+        "signature": "8de27fb04dcd1d7d6fb41d8f9e0abc2ce0ad294fec94fe5d579868e16b690784"
+      },
+      "../core/dist/models/sorting-params.d.ts": {
+        "version": "192f1382d372150a9ee00ec4e9fc1b264ad283cf9bd88f077089ec91878287d6",
+        "signature": "192f1382d372150a9ee00ec4e9fc1b264ad283cf9bd88f077089ec91878287d6"
+      },
+      "../core/dist/models/pagination-params.d.ts": {
+        "version": "40c9236a10e19498ca7d6dd2c9f7c65787b9390c7b061c5aa0d307e320e20503",
+        "signature": "40c9236a10e19498ca7d6dd2c9f7c65787b9390c7b061c5aa0d307e320e20503"
+      },
+      "../core/dist/models/results-with-pagination.d.ts": {
+        "version": "3945708ada5b656e462140c3cfaccb16ea89cc021f4b384e0ac012983b05dc75",
+        "signature": "3945708ada5b656e462140c3cfaccb16ea89cc021f4b384e0ac012983b05dc75"
+      },
+      "../core/dist/models/dtos/tv-show-poster.dto.d.ts": {
+        "version": "7353ec178516b5a6ab84b4521a736936876cc315d3e2263f07025dd435acac5a",
+        "signature": "7353ec178516b5a6ab84b4521a736936876cc315d3e2263f07025dd435acac5a"
+      },
+      "../core/dist/models/sponsored-tv-shows-lists.d.ts": {
+        "version": "49ce704694cadb3b281e1d1ba40cac54a359a4f4f075abcff15105e38ed475d3",
+        "signature": "49ce704694cadb3b281e1d1ba40cac54a359a4f4f075abcff15105e38ed475d3"
+      },
+      "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts": {
+        "version": "886f1d7aa9034c0c00a87d186372fa0ad912b71049b559b27e594c091bbc216e",
+        "signature": "886f1d7aa9034c0c00a87d186372fa0ad912b71049b559b27e594c091bbc216e"
+      },
+      "../core/dist/models/dtos/tv-show.dto.d.ts": {
+        "version": "1a1906c1719ac99121678a25dbd5662e555bcde8ad0d34725620791011867f75",
+        "signature": "1a1906c1719ac99121678a25dbd5662e555bcde8ad0d34725620791011867f75"
+      },
       "../core/dist/models/index.d.ts": {
-        "version": "044d172257796c15e7240522f91d777b7dc156dac6a55f198a47c427844f2b2d",
-        "signature": "044d172257796c15e7240522f91d777b7dc156dac6a55f198a47c427844f2b2d"
+        "version": "c97eecbadbc9ba9d17c364012dc2b7291be86d2a55763d9e5b98a34293681d1c",
+        "signature": "c97eecbadbc9ba9d17c364012dc2b7291be86d2a55763d9e5b98a34293681d1c"
       },
       "../core/dist/entities/tv-show.entity.d.ts": {
         "version": "d7e2508d3326b0286e7cc13505f4d171f7def4fb2c4755af574b1c2cc9a76e7c",
         "signature": "d7e2508d3326b0286e7cc13505f4d171f7def4fb2c4755af574b1c2cc9a76e7c"
       },
       "../core/dist/repositories/tv-show.repository.d.ts": {
-        "version": "8513b66ebf10974daed7cefbd9e3bf33bf7e5a3a7aff624f3c32971fedbd1552",
-        "signature": "8513b66ebf10974daed7cefbd9e3bf33bf7e5a3a7aff624f3c32971fedbd1552"
+        "version": "fd56b1573cadefbdd2ca90db42ad9eee8d7de75e74b474a2aa62048a151f57ed",
+        "signature": "fd56b1573cadefbdd2ca90db42ad9eee8d7de75e74b474a2aa62048a151f57ed"
       },
       "../core/dist/repositories/index.d.ts": {
         "version": "e63196dffc0989c4c613b193f810404e1f552fd592027e308738e1abfe2d6824",
@@ -2542,7 +2550,7 @@
         "signature": "c9ae0b351a07b52f29a28e869d8c7c8d29743bbb5eeddc7c0b5b2a69a2450528"
       },
       "./src/index.ts": {
-        "version": "2aae0265943a9ec020bce88c2bbf7b1053c2998a20dc48dbaee175e6e742b69c",
+        "version": "8b445894026be56d132fc965e9412e4272e3602ebf51412e5da9bbe8bb6bd86b",
         "signature": "396a3607ca8288c7dd02dff9b04e6ffb057b3c6f3d12965421373c3da78b65cc"
       },
       "./node_modules/@types/bson/index.d.ts": {
@@ -2720,6 +2728,26 @@
       "../../node_modules/@types/yargs/index.d.ts": {
         "version": "6055ac126cf1a6c818330d033eb3e99df5070a598359fe30c430f844dafac7ce",
         "signature": "6055ac126cf1a6c818330d033eb3e99df5070a598359fe30c430f844dafac7ce"
+      },
+      "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": {
+        "version": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89",
+        "signature": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89"
+      },
+      "../../../../../../node_modules/@types/node-fetch/externals.d.ts": {
+        "version": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
+        "signature": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73"
+      },
+      "../../../../../../node_modules/@types/node-fetch/index.d.ts": {
+        "version": "f51382950fa81e3a54e9fd9f343fe583cfbb221f15a51936e12411699347effe",
+        "signature": "f51382950fa81e3a54e9fd9f343fe583cfbb221f15a51936e12411699347effe"
+      },
+      "../../../../../../node_modules/@types/prettier/index.d.ts": {
+        "version": "29651525db5579157e617c77e869af8bfdc1130f5d811c1f759ad35b7bafc8ef",
+        "signature": "29651525db5579157e617c77e869af8bfdc1130f5d811c1f759ad35b7bafc8ef"
+      },
+      "../../../../../../node_modules/@types/tunnel/index.d.ts": {
+        "version": "166bfd32f444e0505b9dfcccce99a2c99f04fba1f1e232e93a8ff72660973a87",
+        "signature": "166bfd32f444e0505b9dfcccce99a2c99f04fba1f1e232e93a8ff72660973a87"
       }
     },
     "options": {
@@ -5831,15 +5859,11 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
-      "../core/dist/models/dtos/tv-show.dto.d.ts": [
+      "../core/dist/models/filters.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
-      "../core/dist/models/dtos/tv-show-poster.dto.d.ts": [
-        "./node_modules/@types/node/base.d.ts",
-        "./node_modules/@types/node/ts3.2/index.d.ts"
-      ],
-      "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts": [
+      "../core/dist/models/tv-show-short-info.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -5847,20 +5871,11 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
-      "../core/dist/models/sponsored-tv-shows-lists.d.ts": [
-        "../core/dist/models/dtos/tv-show-poster.dto.d.ts",
-        "./node_modules/@types/node/base.d.ts",
-        "./node_modules/@types/node/ts3.2/index.d.ts"
-      ],
-      "../core/dist/models/filters.d.ts": [
+      "../core/dist/models/pagination-metadata.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
       "../core/dist/models/ordering-mode.d.ts": [
-        "./node_modules/@types/node/base.d.ts",
-        "./node_modules/@types/node/ts3.2/index.d.ts"
-      ],
-      "../core/dist/models/pagination-params.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -5869,21 +5884,45 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
-      "../core/dist/models/tv-show-short-info.d.ts": [
+      "../core/dist/models/pagination-params.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/results-with-pagination.d.ts": [
+        "../core/dist/models/pagination-metadata.d.ts",
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/dtos/tv-show-poster.dto.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/sponsored-tv-shows-lists.d.ts": [
+        "../core/dist/models/dtos/tv-show-poster.dto.d.ts",
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/dtos/tv-show.dto.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
       "../core/dist/models/index.d.ts": [
+        "../core/dist/models/filters.d.ts",
+        "../core/dist/models/tv-show-short-info.d.ts",
+        "../core/dist/models/product.d.ts",
+        "../core/dist/models/pagination-metadata.d.ts",
+        "../core/dist/models/sorting-params.d.ts",
+        "../core/dist/models/pagination-params.d.ts",
+        "../core/dist/models/results-with-pagination.d.ts",
+        "../core/dist/models/sponsored-tv-shows-lists.d.ts",
+        "../core/dist/models/ordering-mode.d.ts",
+        "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts",
         "../core/dist/models/dtos/tv-show.dto.d.ts",
         "../core/dist/models/dtos/tv-show-poster.dto.d.ts",
-        "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts",
-        "../core/dist/models/product.d.ts",
-        "../core/dist/models/sponsored-tv-shows-lists.d.ts",
-        "../core/dist/models/filters.d.ts",
-        "../core/dist/models/ordering-mode.d.ts",
-        "../core/dist/models/pagination-params.d.ts",
-        "../core/dist/models/sorting-params.d.ts",
-        "../core/dist/models/tv-show-short-info.d.ts",
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -7096,6 +7135,28 @@
       ],
       "../../node_modules/@types/yargs/index.d.ts": [
         "../../node_modules/@types/yargs-parser/index.d.ts",
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/externals.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/index.d.ts": [
+        "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts",
+        "./node_modules/@types/node/base.d.ts",
+        "../../../../../../node_modules/@types/node-fetch/externals.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/prettier/index.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/tunnel/index.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ]
@@ -9232,6 +9293,28 @@
         "./node_modules/@types/node/inspector.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
+      "../../../../../../node_modules/@types/tunnel/index.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/prettier/index.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/index.d.ts": [
+        "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts",
+        "./node_modules/@types/node/base.d.ts",
+        "../../../../../../node_modules/@types/node-fetch/externals.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/externals.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
       "../../node_modules/@types/yargs/index.d.ts": [
         "../../node_modules/@types/yargs-parser/index.d.ts",
         "./node_modules/@types/node/base.d.ts",
@@ -9494,37 +9577,26 @@
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
       "../core/dist/models/index.d.ts": [
+        "../core/dist/models/filters.d.ts",
+        "../core/dist/models/tv-show-short-info.d.ts",
+        "../core/dist/models/product.d.ts",
+        "../core/dist/models/pagination-metadata.d.ts",
+        "../core/dist/models/sorting-params.d.ts",
+        "../core/dist/models/pagination-params.d.ts",
+        "../core/dist/models/results-with-pagination.d.ts",
+        "../core/dist/models/sponsored-tv-shows-lists.d.ts",
+        "../core/dist/models/ordering-mode.d.ts",
+        "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts",
         "../core/dist/models/dtos/tv-show.dto.d.ts",
         "../core/dist/models/dtos/tv-show-poster.dto.d.ts",
-        "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts",
-        "../core/dist/models/product.d.ts",
-        "../core/dist/models/sponsored-tv-shows-lists.d.ts",
-        "../core/dist/models/filters.d.ts",
-        "../core/dist/models/ordering-mode.d.ts",
-        "../core/dist/models/pagination-params.d.ts",
-        "../core/dist/models/sorting-params.d.ts",
-        "../core/dist/models/tv-show-short-info.d.ts",
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
-      "../core/dist/models/tv-show-short-info.d.ts": [
+      "../core/dist/models/dtos/tv-show.dto.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
-      "../core/dist/models/sorting-params.d.ts": [
-        "../core/dist/models/ordering-mode.d.ts",
-        "./node_modules/@types/node/base.d.ts",
-        "./node_modules/@types/node/ts3.2/index.d.ts"
-      ],
-      "../core/dist/models/pagination-params.d.ts": [
-        "./node_modules/@types/node/base.d.ts",
-        "./node_modules/@types/node/ts3.2/index.d.ts"
-      ],
-      "../core/dist/models/ordering-mode.d.ts": [
-        "./node_modules/@types/node/base.d.ts",
-        "./node_modules/@types/node/ts3.2/index.d.ts"
-      ],
-      "../core/dist/models/filters.d.ts": [
+      "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -9533,19 +9605,41 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
-      "../core/dist/models/product.d.ts": [
-        "./node_modules/@types/node/base.d.ts",
-        "./node_modules/@types/node/ts3.2/index.d.ts"
-      ],
-      "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts": [
-        "./node_modules/@types/node/base.d.ts",
-        "./node_modules/@types/node/ts3.2/index.d.ts"
-      ],
       "../core/dist/models/dtos/tv-show-poster.dto.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
-      "../core/dist/models/dtos/tv-show.dto.d.ts": [
+      "../core/dist/models/results-with-pagination.d.ts": [
+        "../core/dist/models/pagination-metadata.d.ts",
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/pagination-params.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/sorting-params.d.ts": [
+        "../core/dist/models/ordering-mode.d.ts",
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/ordering-mode.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/pagination-metadata.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/product.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/tv-show-short-info.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/filters.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -11892,16 +11986,18 @@
       "../../node_modules/rxjs/index.d.ts",
       "../core/dist/repositories/repository-manager.abstract.d.ts",
       "../core/dist/repositories/mongo-repository-manager.d.ts",
-      "../core/dist/models/dtos/tv-show.dto.d.ts",
-      "../core/dist/models/dtos/tv-show-poster.dto.d.ts",
-      "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts",
-      "../core/dist/models/product.d.ts",
-      "../core/dist/models/sponsored-tv-shows-lists.d.ts",
       "../core/dist/models/filters.d.ts",
-      "../core/dist/models/ordering-mode.d.ts",
-      "../core/dist/models/pagination-params.d.ts",
-      "../core/dist/models/sorting-params.d.ts",
       "../core/dist/models/tv-show-short-info.d.ts",
+      "../core/dist/models/product.d.ts",
+      "../core/dist/models/pagination-metadata.d.ts",
+      "../core/dist/models/ordering-mode.d.ts",
+      "../core/dist/models/sorting-params.d.ts",
+      "../core/dist/models/pagination-params.d.ts",
+      "../core/dist/models/results-with-pagination.d.ts",
+      "../core/dist/models/dtos/tv-show-poster.dto.d.ts",
+      "../core/dist/models/sponsored-tv-shows-lists.d.ts",
+      "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts",
+      "../core/dist/models/dtos/tv-show.dto.d.ts",
       "../core/dist/models/index.d.ts",
       "../core/dist/entities/tv-show.entity.d.ts",
       "../core/dist/repositories/tv-show.repository.d.ts",
@@ -12095,6 +12191,11 @@
       "../../node_modules/@types/webpack/index.d.ts",
       "../../node_modules/@types/yargs-parser/index.d.ts",
       "../../node_modules/@types/yargs/index.d.ts",
+      "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts",
+      "../../../../../../node_modules/@types/node-fetch/externals.d.ts",
+      "../../../../../../node_modules/@types/node-fetch/index.d.ts",
+      "../../../../../../node_modules/@types/prettier/index.d.ts",
+      "../../../../../../node_modules/@types/tunnel/index.d.ts",
       "../../node_modules/typescript/lib/lib.es2015.d.ts",
       "../../node_modules/typescript/lib/lib.es2016.d.ts",
       "../../node_modules/typescript/lib/lib.es2017.d.ts",

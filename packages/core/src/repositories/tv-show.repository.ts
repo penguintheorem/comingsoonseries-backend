@@ -40,6 +40,9 @@ export class TvShowRepository {
       switchMap(repo =>
         from(repo.find({ where: { _id: new ObjectId(tvShowId) } })),
       ),
+      tap(tvShows => {
+        console.log('tvShows: ', tvShows[0].products);
+      }),
       map(tvShows => tvShows[0]),
     );
   }
@@ -149,9 +152,26 @@ export class TvShowRepository {
    * @param tvShowId - The id to use for the research
    * @returns An Observable that emits the products associated to the `tvShow` found by the input id or `undefined`
    */
-  getProducts(tvShowId: string): Observable<Product[]> {
+  getProducts(
+    tvShowId: string,
+    limit: number,
+    offset: number,
+  ): Observable<{
+    items: Product[];
+    metadata: { count: number; size: number };
+  }> {
     return this.find(tvShowId).pipe(
-      map(tvShow => (tvShow ? tvShow.products : undefined)),
+      map(tvShow =>
+        tvShow
+          ? {
+              items: tvShow.products.slice(offset, limit),
+              metadata: {
+                count: tvShow.products.length,
+                size: tvShow.products.slice(offset, limit).length,
+              },
+            }
+          : undefined,
+      ),
     );
   }
 

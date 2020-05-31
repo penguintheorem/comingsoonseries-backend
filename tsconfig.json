@@ -6,6 +6,7 @@
       "@comingsoonseries/core/*": ["core/src/*"],
       "@comingsoonseries/common/*": ["common/src/*"],
       "@comingsoonseries/api/*": ["api/src/*"],
+      "@comingsoonseries/bo/*": ["back-office/src/*"],
       "@comingsoonseries/auth/*": ["auth/src/*"],
       "@comingsoonseries/loader/*": ["loader/src/*"]
     }

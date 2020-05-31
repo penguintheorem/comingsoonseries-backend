@@ -62,8 +62,18 @@ export class TvShowsController {
   @Get(':tvShowId/products')
   getProducts(
     @Param() urlSegmentParams: { tvShowId: string },
-  ): Observable<Product[]> {
-    return this.tvShowsService.getProducts(urlSegmentParams.tvShowId);
+    @Query() query,
+  ): Observable<{
+    items: Product[];
+    metadata: { count: number; size: number };
+  }> {
+    const { limit, offset } = query;
+
+    return this.tvShowsService.getProducts(
+      urlSegmentParams.tvShowId,
+      +limit,
+      +offset,
+    );
   }
 
   // back-office (small for now)
