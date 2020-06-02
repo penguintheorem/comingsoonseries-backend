@@ -1,3 +1,4 @@
+import { TvShowState } from './../models/tvShowState';
 import { Entity, ObjectIdColumn, Column, ObjectID } from 'typeorm';
 import { Product } from '../models';
 
@@ -34,6 +35,12 @@ export class TvShow {
   country: string;
 
   @Column()
+  currentSeason: number;
+
+  @Column('enum', { enum: TvShowState })
+  currentState: TvShowState;
+
+  @Column()
   next_release_date: Date;
 
   @Column()
@@ -53,6 +60,9 @@ export class TvShow {
 
   @Column()
   directors: string[];
+
+  @Column()
+  producers: string[];
 
   @Column(type => Product)
   products: Product[];

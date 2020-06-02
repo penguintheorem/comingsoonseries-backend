@@ -1909,6 +1909,10 @@
         "version": "7de85b824b97082716944b250675dba24963073bdbc770a50b02cd3c83985439",
         "signature": "7de85b824b97082716944b250675dba24963073bdbc770a50b02cd3c83985439"
       },
+      "../core/dist/models/tvshowstate.d.ts": {
+        "version": "5791560ead95acda77062302d9e251e7eda133ed96b62576dedb779a251fbbae",
+        "signature": "5791560ead95acda77062302d9e251e7eda133ed96b62576dedb779a251fbbae"
+      },
       "../core/dist/models/filters.d.ts": {
         "version": "12fc1f98fe613023f779a05d8c72162606e2109aecebe44244a561144bfb7c86",
         "signature": "12fc1f98fe613023f779a05d8c72162606e2109aecebe44244a561144bfb7c86"
@@ -1962,8 +1966,8 @@
         "signature": "c97eecbadbc9ba9d17c364012dc2b7291be86d2a55763d9e5b98a34293681d1c"
       },
       "../core/dist/entities/tv-show.entity.d.ts": {
-        "version": "d7e2508d3326b0286e7cc13505f4d171f7def4fb2c4755af574b1c2cc9a76e7c",
-        "signature": "d7e2508d3326b0286e7cc13505f4d171f7def4fb2c4755af574b1c2cc9a76e7c"
+        "version": "ae143d69aea816f9bf04a962fe07077eaf47e57e88a5528dac02bb904b0f7c40",
+        "signature": "ae143d69aea816f9bf04a962fe07077eaf47e57e88a5528dac02bb904b0f7c40"
       },
       "../core/dist/repositories/tv-show.repository.d.ts": {
         "version": "fd56b1573cadefbdd2ca90db42ad9eee8d7de75e74b474a2aa62048a151f57ed",
@@ -5859,6 +5863,10 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
+      "../core/dist/models/tvshowstate.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
       "../core/dist/models/filters.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
@@ -5927,6 +5935,7 @@
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
       "../core/dist/entities/tv-show.entity.d.ts": [
+        "../core/dist/models/tvshowstate.d.ts",
         "../core/node_modules/typeorm/index.d.ts",
         "../core/dist/models/index.d.ts",
         "./node_modules/@types/node/base.d.ts",
@@ -9571,6 +9580,7 @@
         "./src/service/config.interface.ts"
       ],
       "../core/dist/entities/tv-show.entity.d.ts": [
+        "../core/dist/models/tvshowstate.d.ts",
         "../core/node_modules/typeorm/index.d.ts",
         "../core/dist/models/index.d.ts",
         "./node_modules/@types/node/base.d.ts",
@@ -9640,6 +9650,10 @@
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
       "../core/dist/models/filters.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../core/dist/models/tvshowstate.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -11986,6 +12000,7 @@
       "../../node_modules/rxjs/index.d.ts",
       "../core/dist/repositories/repository-manager.abstract.d.ts",
       "../core/dist/repositories/mongo-repository-manager.d.ts",
+      "../core/dist/models/tvshowstate.d.ts",
       "../core/dist/models/filters.d.ts",
       "../core/dist/models/tv-show-short-info.d.ts",
       "../core/dist/models/product.d.ts",

@@ -13,6 +13,7 @@ import {
   UploadedFile,
   UseInterceptors,
   Delete,
+  Put,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { Observable, throwError } from 'rxjs';
@@ -46,7 +47,7 @@ export class TvShowsController {
     return this.tvShowsService.find(urlSegmentParams.tvShowId);
   }
 
-  @Patch(':tvShowId')
+  @Put(':tvShowId')
   updateTvShow(
     @Param() urlSegmentParams: { tvShowId: string },
     @Body() tvShow: TvShow,
@@ -130,32 +131,14 @@ export class TvShowsController {
     @Query() query,
   ): Observable<any> {
     const type = query.type && +query.type;
-    const { tvShowId } = urlSegmentParams;
     const { originalname, path } = file;
-    let fileUrl = null;
 
     if (type === undefined) {
       return throwError(new Error('type undefined'));
     }
 
-    return this.fileUploadService.upload(originalname, path, type).pipe(
-      switchMap(url => {
-        fileUrl = url;
-        return this.tvShowsService.find(tvShowId);
-      }),
-      switchMap(tvShow => {
-        // define an enum inside the core part please
-        if (type === ImageType.COVER) {
-          // cover
-          tvShow.cover = fileUrl;
-        } else if (type === ImageType.POSTER) {
-          // poster
-          tvShow.poster = fileUrl;
-        }
-
-        return this.tvShowsService.update(tvShowId, tvShow);
-      }),
-      map(tvShow => ({ fileUrl })),
-    );
+    return this.fileUploadService
+      .upload(originalname, path, type)
+      .pipe(map(fileUrl => ({ fileUrl })));
   }
 }

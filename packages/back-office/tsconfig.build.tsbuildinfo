@@ -437,6 +437,10 @@
         "version": "c97eecbadbc9ba9d17c364012dc2b7291be86d2a55763d9e5b98a34293681d1c",
         "signature": "c97eecbadbc9ba9d17c364012dc2b7291be86d2a55763d9e5b98a34293681d1c"
       },
+      "../core/dist/models/tvshowstate.d.ts": {
+        "version": "5791560ead95acda77062302d9e251e7eda133ed96b62576dedb779a251fbbae",
+        "signature": "5791560ead95acda77062302d9e251e7eda133ed96b62576dedb779a251fbbae"
+      },
       "../core/node_modules/reflect-metadata/index.d.ts": {
         "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
         "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90"
@@ -1422,8 +1426,8 @@
         "signature": "8e3aa6acc638046317b405f87ce133c165d6fc2e140c3912ac56871226fa6a6b"
       },
       "../core/dist/entities/tv-show.entity.d.ts": {
-        "version": "d7e2508d3326b0286e7cc13505f4d171f7def4fb2c4755af574b1c2cc9a76e7c",
-        "signature": "d7e2508d3326b0286e7cc13505f4d171f7def4fb2c4755af574b1c2cc9a76e7c"
+        "version": "ae143d69aea816f9bf04a962fe07077eaf47e57e88a5528dac02bb904b0f7c40",
+        "signature": "ae143d69aea816f9bf04a962fe07077eaf47e57e88a5528dac02bb904b0f7c40"
       },
       "../core/dist/entities/draft.entity.d.ts": {
         "version": "ef52f5596afe6ba0eb2b347fc13fb849eefc854c0c38dfdd5dd79f37d4889704",
@@ -3742,7 +3746,7 @@
         "signature": "24e313fdbd1e8cfeab3f25b0f61a455a3fbc454382cfcf73b5e4c56f54151412"
       },
       "./src/controllers/tv-shows.controller.ts": {
-        "version": "3431f029cc872fb2b4c0c9df86b09d1ae322747fd42fea682c09e40f046390e9",
+        "version": "c54121334c0a1e43964740d8c02bead8f31cd3bf2239eeb6a2e0144ea1903aca",
         "signature": "f4ba3165ae50a64754726481fb65737aebb758e9004edd253a3af497a5a50154"
       },
       "../auth/dist/models/get-token-response.interface.d.ts": {
@@ -5129,6 +5133,12 @@
         "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts",
         "../core/dist/models/dtos/tv-show.dto.d.ts",
         "../core/dist/models/dtos/tv-show-poster.dto.d.ts",
+        "../../node_modules/@types/node/fs.d.ts",
+        "../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../node_modules/@types/node/util.d.ts",
+        "../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../core/dist/models/tvshowstate.d.ts": [
         "../../node_modules/@types/node/fs.d.ts",
         "../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../node_modules/@types/node/util.d.ts",
@@ -7306,6 +7316,7 @@
         "../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../core/dist/entities/tv-show.entity.d.ts": [
+        "../core/dist/models/tvshowstate.d.ts",
         "../core/node_modules/typeorm/index.d.ts",
         "../core/dist/models/index.d.ts",
         "../../node_modules/@types/node/fs.d.ts",
@@ -14327,6 +14338,7 @@
         "../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../core/dist/entities/tv-show.entity.d.ts": [
+        "../core/dist/models/tvshowstate.d.ts",
         "../core/node_modules/typeorm/index.d.ts",
         "../core/dist/models/index.d.ts",
         "../../node_modules/@types/node/fs.d.ts",
@@ -16833,6 +16845,12 @@
         "../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../core/dist/models/dtos/tv-show.dto.d.ts": [
+        "../../node_modules/@types/node/fs.d.ts",
+        "../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../node_modules/@types/node/util.d.ts",
+        "../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../core/dist/models/tvshowstate.d.ts": [
         "../../node_modules/@types/node/fs.d.ts",
         "../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../node_modules/@types/node/util.d.ts",
@@ -23795,6 +23813,7 @@
       "../core/dist/models/dtos/tv-show-suggestion.dto.d.ts",
       "../core/dist/models/dtos/tv-show.dto.d.ts",
       "../core/dist/models/index.d.ts",
+      "../core/dist/models/tvshowstate.d.ts",
       "../core/node_modules/reflect-metadata/index.d.ts",
       "../core/node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts",
       "../core/node_modules/typeorm/schema-builder/table/tablecolumn.d.ts",
