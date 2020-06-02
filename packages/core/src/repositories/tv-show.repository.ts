@@ -40,9 +40,6 @@ export class TvShowRepository {
       switchMap(repo =>
         from(repo.find({ where: { _id: new ObjectId(tvShowId) } })),
       ),
-      tap(tvShows => {
-        console.log('tvShows: ', tvShows[0].products);
-      }),
       map(tvShows => tvShows[0]),
     );
   }

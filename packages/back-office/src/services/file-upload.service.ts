@@ -24,9 +24,6 @@ export class FileUploadService {
     type: ImageType,
   ): Observable<string> {
     // upload the file temporarily saved locally to S3
-    console.log('begin the upload to s3 with parameters...');
-    console.log(`fileName: ${fileName}`);
-    console.log(`filePath: ${filePath}`);
     return from(
       this.s3
         .upload(
@@ -51,12 +48,10 @@ export class FileUploadService {
         .promise(),
     ).pipe(
       map(data => {
-        console.log('data got from the upload: ', data);
         // return the image url
         return data.Location;
       }),
       catchError(err => {
-        console.log('err during the upload: ', err);
         return throwError(err);
       }),
     );

@@ -65,10 +65,6 @@ export class TvShowsController {
   }> {
     const { limit, offset } = query;
 
-    console.log(`request for product received`);
-    console.log(
-      `tvShow: ${urlSegmentParams.tvShowId}, limit: ${limit}, offset: ${offset}`,
-    );
     return this.tvShowsService.getProducts(
       urlSegmentParams.tvShowId,
       +limit,
@@ -112,7 +108,6 @@ export class TvShowsController {
   uploadGadgetImage(
     @UploadedFile() file: File,
   ): Observable<{ fileUrl: string }> {
-    console.log('got file: ', file);
     const { originalname, path } = file;
 
     return this.fileUploadService
