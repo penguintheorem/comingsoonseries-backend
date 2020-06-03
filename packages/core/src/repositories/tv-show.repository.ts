@@ -25,7 +25,7 @@ export class TvShowRepository {
   add(tvShow: TvShow): Observable<TvShow> {
     return this._manager.getRepository<TvShow>(TvShow).pipe(
       switchMap(repo => from(repo.save(tvShow))),
-      map(() => tvShow),
+      map(() => tvShow)
     );
   }
 
@@ -37,10 +37,8 @@ export class TvShowRepository {
    */
   find(tvShowId: string): Observable<TvShow> {
     return this._manager.getRepository<TvShow>(TvShow).pipe(
-      switchMap(repo =>
-        from(repo.find({ where: { _id: new ObjectId(tvShowId) } })),
-      ),
-      map(tvShows => tvShows[0]),
+      switchMap(repo => from(repo.find({ where: { _id: new ObjectId(tvShowId) } }))),
+      map(tvShows => tvShows[0])
     );
   }
 
@@ -60,10 +58,10 @@ export class TvShowRepository {
             where: { title: new RegExp(sanitize(searchTerm), 'i') },
             order: { imdb_average_rank: 'DESC' },
             take: 20,
-          }),
-        ),
+          })
+        )
       ),
-      map((tvShows: TvShow[]) => this.toTvShowSuggestions(tvShows)),
+      map((tvShows: TvShow[]) => this.toTvShowSuggestions(tvShows))
     );
   }
 
@@ -81,22 +79,22 @@ export class TvShowRepository {
             where: { title: new RegExp(sanitize(searchTerm), 'i') },
             order: { imdb_average_rank: 'DESC' },
             take: 20,
-          }),
-        ),
+          })
+        )
       ),
       map(tvShows =>
         tvShows.map(tvShow => ({
           id: tvShow.id.toString(),
           title: tvShow.title,
-        })),
-      ),
+        }))
+      )
     );
   }
 
   getTvShowPosters(
     paginationParams: PaginationParams,
     filters: Filters,
-    sortingParams: SortingParams,
+    sortingParams: SortingParams
   ): Observable<TvShowPoster[]> {
     const { page, size } = paginationParams;
     const { sort } = sortingParams;
@@ -136,10 +134,10 @@ export class TvShowRepository {
                 }),
               },
             }),
-          }),
-        ),
+          })
+        )
       ),
-      map((tvShows: TvShow[]) => this.toTvShowGridItems(tvShows)),
+      map((tvShows: TvShow[]) => this.toTvShowGridItems(tvShows))
     );
   }
 
@@ -152,7 +150,7 @@ export class TvShowRepository {
   getProducts(
     tvShowId: string,
     limit: number,
-    offset: number,
+    offset: number
   ): Observable<{
     items: Product[];
     metadata: { count: number; size: number };
@@ -167,8 +165,8 @@ export class TvShowRepository {
                 size: tvShow.products.slice(offset, limit).length,
               },
             }
-          : undefined,
-      ),
+          : undefined
+      )
     );
   }
 
@@ -181,7 +179,7 @@ export class TvShowRepository {
   update(tvShowId: string, newTvShow: TvShow): Observable<TvShow> {
     return this._manager.getRepository<TvShow>(TvShow).pipe(
       switchMap(repo => repo.update(tvShowId, newTvShow)),
-      map((updateResult: UpdateResult) => updateResult[0] as TvShow),
+      map((updateResult: UpdateResult) => newTvShow)
     );
   }
 

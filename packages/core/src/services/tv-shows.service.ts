@@ -24,39 +24,33 @@ export class TvShowsService {
   getTvShowPosters(
     paginationParams: PaginationParams,
     filters: Filters,
-    sortingParams: SortingParams,
+    sortingParams: SortingParams
   ): Observable<TvShowPoster[]> {
-    return this.tvShowRepository.getTvShowPosters(
-      paginationParams,
-      filters,
-      sortingParams,
-    );
+    return this.tvShowRepository.getTvShowPosters(paginationParams, filters, sortingParams);
   }
 
-  getSponsoredTvShows(
-    paginationParams: PaginationParams,
-  ): Observable<SponsoredTvShowsLists> {
+  getSponsoredTvShows(paginationParams: PaginationParams): Observable<SponsoredTvShowsLists> {
     return forkJoin({
       trending: this.tvShowRepository.getTvShowPosters(
         paginationParams,
         {},
         {
           sort: OrderingMode.BY_POPULARITY,
-        },
+        }
       ),
       latest: this.tvShowRepository.getTvShowPosters(
         paginationParams,
         {},
         {
           sort: OrderingMode.BY_DATE,
-        },
+        }
       ),
       mustToSee: this.tvShowRepository.getTvShowPosters(
         paginationParams,
         {},
         {
           sort: OrderingMode.BY_RANK,
-        },
+        }
       ),
     });
   }
@@ -71,7 +65,7 @@ export class TvShowsService {
   getProducts(
     tvShowId: string,
     limit: number,
-    offset: number,
+    offset: number
   ): Observable<{
     items: Product[];
     metadata: { count: number; size: number };
@@ -80,9 +74,7 @@ export class TvShowsService {
   }
 
   create(tvShowDto: TvShowDTO): Observable<TvShow> {
-    return this.tvShowRepository.add(
-      this.tvShowRepository.getEntityFromDTO(tvShowDto),
-    );
+    return this.tvShowRepository.add(this.tvShowRepository.getEntityFromDTO(tvShowDto));
   }
 
   addProduct(tvShowId: string, product: Product): Observable<Product> {
@@ -94,23 +86,19 @@ export class TvShowsService {
         });
         return this.tvShowRepository.update(tvShowId, tvShow);
       }),
-      mapTo(product),
+      mapTo(product)
     );
   }
 
-  updateProduct(
-    tvShowId: string,
-    productId: string,
-    newProduct: Product,
-  ): Observable<Product> {
+  updateProduct(tvShowId: string, productId: string, newProduct: Product): Observable<Product> {
     return this.tvShowRepository.find(tvShowId).pipe(
       switchMap((tvShow: TvShow) => {
         tvShow.products = tvShow.products.map(product =>
-          product.productId.toString() === productId ? newProduct : product,
+          product.productId.toString() === productId ? newProduct : product
         );
         return this.tvShowRepository.update(tvShowId, tvShow);
       }),
-      mapTo(newProduct),
+      mapTo(newProduct)
     );
   }
 
@@ -118,11 +106,11 @@ export class TvShowsService {
     return this.tvShowRepository.find(tvShowId).pipe(
       switchMap((tvShow: TvShow) => {
         tvShow.products = tvShow.products.filter(
-          product => product.productId.toString() !== productId,
+          product => product.productId.toString() !== productId
         );
         return this.tvShowRepository.update(tvShowId, tvShow);
       }),
-      mapTo(true),
+      mapTo(true)
     );
   }
 

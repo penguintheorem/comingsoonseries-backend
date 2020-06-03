@@ -1,3 +1,4 @@
+import { TvShowUpdatesGateway } from './services/tv-show-updates.gateway';
 import { DraftsController } from './controllers/drafts.controller';
 import { FileUploadService } from './services/file-upload.service';
 import { Module } from '@nestjs/common';
@@ -16,6 +17,6 @@ import { MulterModule } from '@nestjs/platform-express';
     }),
   ],
   controllers: [AuthController, TvShowsController, DraftsController],
-  providers: [FileUploadService],
+  providers: [FileUploadService, TvShowUpdatesGateway],
 })
 export class AppModule {}

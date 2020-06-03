@@ -9,7 +9,7 @@
     "bo": "npm run build && cd packages/back-office && npm run start:debug"
   },
   "dependencies": {
-    "@nestjs/common": "^6.11.8",
+    "@nestjs/common": "^7.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.4"
   },
