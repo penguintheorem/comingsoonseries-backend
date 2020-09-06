@@ -1,3 +1,4 @@
+import { Network } from './../models/network';
 import { TvShowState } from './../models/tvShowState';
 import { Entity, ObjectIdColumn, Column, ObjectID } from 'typeorm';
 import { Product } from '../models';
@@ -56,7 +57,7 @@ export class TvShow {
   cover: string;
 
   @Column()
-  networks: string[];
+  networks: Network[];
 
   @Column()
   directors: string[];

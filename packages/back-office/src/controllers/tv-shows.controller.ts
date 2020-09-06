@@ -1,27 +1,29 @@
+import { JwtAuthGuard } from '@comingsoonseries/auth/services/jwt-auth.guard';
 import { TvShow } from '@comingsoonseries/core/entities';
 import { Product, TvShowShortInfo } from '@comingsoonseries/core/models';
 import { TvShowsService } from '@comingsoonseries/core/services';
 import {
   Body,
   Controller,
+  Delete,
   Get,
   HttpCode,
   Param,
   Patch,
   Post,
+  Put,
   Query,
   UploadedFile,
+  UseGuards,
   UseInterceptors,
-  Delete,
-  Put,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { Observable, throwError } from 'rxjs';
-import { map, switchMap, finalize, tap } from 'rxjs/operators';
+import { map, tap, delay } from 'rxjs/operators';
 import { File } from '../models/file';
+import { TvShowUpdatesGateway } from '../services/tv-show-updates.gateway';
 import { ImageType } from './../models/image-type';
 import { FileUploadService } from './../services/file-upload.service';
-import { TvShowUpdatesGateway } from '../services/tv-show-updates.gateway';
 
 @Controller('bo/tv-shows')
 export class TvShowsController {
@@ -48,6 +50,7 @@ export class TvShowsController {
   }
 
   // MVP I
+  @UseGuards(JwtAuthGuard)
   @Put(':tvShowId')
   updateTvShow(
     @Param() urlSegmentParams: { tvShowId: string },

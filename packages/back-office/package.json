@@ -35,13 +35,18 @@
     "@nestjs/platform-express": "^7.0.0",
     "@nestjs/websockets": "^7.0.0",
     "@nestjs/swagger": "^3.1.0",
+    "@nestjs/jwt": "^7.0.0",
+    "passport": "^0.4.1",
+    "jwks-rsa": "^1.7.0",
+    "passport-jwt": "^4.0.0",
     "aws-sdk": "^2.652.0",
     "dotenv": "^8.2.0",
     "helmet": "^3.21.3",
     "swagger-ui-express": "^4.1.2"
   },
   "devDependencies": {
-    "@types/socket.io": "^2.1.8"
+    "@types/socket.io": "^2.1.8",
+    "@types/passport-jwt": "3.0.3"
   },
   "bugs": {
     "url": "https://github.com/penguintheorem/comingsoonseries-backend/issues"

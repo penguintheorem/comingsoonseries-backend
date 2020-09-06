@@ -12,10 +12,16 @@ import { PaginationParams } from '../models/pagination-params';
 import { SortingParams } from '../models/sorting-params';
 import { TvShowShortInfo } from '../models/tv-show-short-info';
 import { TvShowRepository } from '../repositories';
+import { TvShowSearchResult } from '../models/tv-show-search-result';
 
 @Injectable()
 export class TvShowsService {
   constructor(private readonly tvShowRepository: TvShowRepository) {}
+
+  // basically for the mvp
+  search(query?: string, paginationParams?: PaginationParams): Observable<TvShowSearchResult[]> {
+    return this.tvShowRepository.search(query, paginationParams);
+  }
 
   find(tvShowId: string): Observable<TvShow> {
     return this.tvShowRepository.find(tvShowId);

@@ -16,8 +16,7 @@ export class Auth0Service {
   private readonly CLIENT_ID = process.env.CLIENT_ID;
   private readonly CLIENT_SECRET = process.env.CLIENT_SECRET;
   private readonly CONNECTION = process.env.CONNECTION;
-  private readonly MANAGEMENT_API_TOKEN =
-    process.env.AUTH0_MANAGEMENT_API_TOKEN;
+  private readonly MANAGEMENT_API_TOKEN = process.env.AUTH0_MANAGEMENT_API_TOKEN;
 
   private readonly GET_ACCESS_TOKEN_ENDPOINT = `oauth/token`;
   private readonly SIGNUP_ENDPOINT = `dbconnections/signup`;
@@ -37,7 +36,7 @@ export class Auth0Service {
 
   constructor(
     private readonly httpService: HttpService,
-    private readonly mailerService: MailerService,
+    private readonly mailerService: MailerService
   ) {}
 
   getToken(user: User): Observable<AxiosResponse<GetTokenResponse>> {
@@ -50,7 +49,7 @@ export class Auth0Service {
     return this.httpService.post(
       `${this.DOMAIN}/${this.GET_ACCESS_TOKEN_ENDPOINT}`,
       `${encodedFormData}`,
-      { headers },
+      { headers }
     );
   }
 
@@ -64,19 +63,14 @@ export class Auth0Service {
       password: user.password,
     };
 
-    return this.httpService
-      .post(`${this.DOMAIN}/${this.SIGNUP_ENDPOINT}`, data, { headers })
-      .pipe(
-        catchError(err => {
-          return throwError(err);
-        }),
-      );
+    return this.httpService.post(`${this.DOMAIN}/${this.SIGNUP_ENDPOINT}`, data, { headers }).pipe(
+      catchError(err => {
+        return throwError(err);
+      })
+    );
   }
 
-  askForEmailVerification(
-    userId: string,
-    userEmail: string,
-  ): Observable<string> {
+  askForEmailVerification(userId: string, userEmail: string): Observable<string> {
     return this.httpService
       .post<string>(
         `${this.DOMAIN}/${this.GET_TICKET_ENDPOINT}`,
@@ -88,7 +82,7 @@ export class Auth0Service {
           headers: {
             Authorization: `Bearer ${this.MANAGEMENT_API_TOKEN}`,
           },
-        },
+        }
       )
       .pipe(
         pluck('data'),
@@ -99,9 +93,9 @@ export class Auth0Service {
               from: 'attiliourb@gmail.com',
               subject: 'Test email verification',
               html: `<b>Hey man, here the verification link: ${obj.ticket}</b>`,
-            }),
+            })
           );
-        }),
+        })
       );
   }
 

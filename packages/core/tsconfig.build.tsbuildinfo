@@ -1293,6 +1293,10 @@
         "version": "ae0897bbc3cda17aba9a9b18f2a56e1d86a4d3bcb1ac2ed6370146d5ddd4c802",
         "signature": "12fc1f98fe613023f779a05d8c72162606e2109aecebe44244a561144bfb7c86"
       },
+      "./src/models/tvshowstate.ts": {
+        "version": "99abadcbbd5d22f90d33e03013e48319db010f951ab5db7cace6ca47f6e3572a",
+        "signature": "ebc87685d10c336ce5df1efd991f6b34dfa17f5aba11921bad95a5a65d91d06b"
+      },
       "./src/models/tv-show-short-info.ts": {
         "version": "deba75d0e942cadf4e11dbdfb609cbb3933ad39ea36828bff5a9c0af21001707",
         "signature": "c2d667c24b71ebd5709a679effdda4ee82b65a77c6f36483d3411e656511ea8e"
@@ -2285,6 +2289,18 @@
         "version": "c272a505a1be1246b3e649df5e2fcf7d557395e71b0bc4b85db271de8af3f92d",
         "signature": "74e531a5fc00cc8742fcdd5908f2024f6f6f81dcf4b85703d4acb7c681e24a4f"
       },
+      "./src/models/network-type.ts": {
+        "version": "39eff6fe959d3b103e7573226175a44cb66e9c892269965eba717d97b008fb2f",
+        "signature": "0ef8e6bd691f769758bf0c19e70049b18c9ac2da4260aac097e79a1a1dcc149e"
+      },
+      "./src/models/network.ts": {
+        "version": "e4919f367a35e4ab3243e87080282f212d5b1a4745f0634a91049b0efe601fb9",
+        "signature": "bf073784f9958c6ba26a0d4c0141524425a17e9ea639037ac9852b2cfdd9ca8f"
+      },
+      "./src/models/tv-show-search-result.ts": {
+        "version": "a5c92bbceb62f7f13e99def681510b6d04c21b913b4edf6ce4f0220fea422088",
+        "signature": "2f07434a7c7f461362be2ac24f4e5d8945cd9cbae09153e8e854d9965ae01f71"
+      },
       "./src/models/pagination-metadata.ts": {
         "version": "ae5fb4d6ac2f57b4cff4a0c80555b25d247516253a37709756672eebbd8accc4",
         "signature": "29b2013dd609fc146a4f8fe58811282c5b5285ff0b44ad6dd2434bef624e47a5"
@@ -2306,8 +2322,8 @@
         "signature": "3945708ada5b656e462140c3cfaccb16ea89cc021f4b384e0ac012983b05dc75"
       },
       "./src/models/dtos/tv-show-poster.dto.ts": {
-        "version": "eaab96c587a3ef96bc2da2ae2b1aa7503fa25c5bf1518db015ecc37a0a8e2e3d",
-        "signature": "7353ec178516b5a6ab84b4521a736936876cc315d3e2263f07025dd435acac5a"
+        "version": "4d9904381a9845697719c62d1a2dd40813ae02856ef6f774ecd31065225227ce",
+        "signature": "d55aebd8a39acbb12882454acba8efea283feabea28dcca80601d1cc92ffb8c5"
       },
       "./src/models/sponsored-tv-shows-lists.ts": {
         "version": "02affced37073efa1db732aea226d7c05c02fa9b2908b76d18f72e1366a7cdea",
@@ -2322,16 +2338,12 @@
         "signature": "1a1906c1719ac99121678a25dbd5662e555bcde8ad0d34725620791011867f75"
       },
       "./src/models/index.ts": {
-        "version": "c97eecbadbc9ba9d17c364012dc2b7291be86d2a55763d9e5b98a34293681d1c",
-        "signature": "c97eecbadbc9ba9d17c364012dc2b7291be86d2a55763d9e5b98a34293681d1c"
-      },
-      "./src/models/tvshowstate.ts": {
-        "version": "7bc32674b2a7242c3c8d29aca7a157eddde3e11eac618f4524099378796d37d5",
-        "signature": "5791560ead95acda77062302d9e251e7eda133ed96b62576dedb779a251fbbae"
+        "version": "f4984a8d719ce5e0446a3247951918c760a0e553e4a0ef60cff74cd16cf64b8b",
+        "signature": "f4984a8d719ce5e0446a3247951918c760a0e553e4a0ef60cff74cd16cf64b8b"
       },
       "./src/entities/tv-show.entity.ts": {
-        "version": "779147c21ae204d2da54d06d2509508bfd1e977dd3f91e013a5956abef82d848",
-        "signature": "ae143d69aea816f9bf04a962fe07077eaf47e57e88a5528dac02bb904b0f7c40"
+        "version": "3a2fd04db2494cf7913269c5817444b45e25c2ecfe8749786c8ab3bfd39bea1b",
+        "signature": "6f4fee220552f8c7201c856fcefb286ea875f4afcdd5d9f97e835611c373f50b"
       },
       "./src/entities/draft.entity.ts": {
         "version": "d9ddbd6b3d2a87275851122d5e3a5b07b7922bd68ce844be63e8ba365a87a286",
@@ -2382,16 +2394,16 @@
         "signature": "592f4e78f8981562f0b74251dc500736c0bc71ec3868bc6a1fa60eae3db15044"
       },
       "./src/repositories/tv-show.repository.ts": {
-        "version": "d5021252ff78e3c35c981447a058813de636d4f0b3c32175f19ad7a9767abbdf",
-        "signature": "fd56b1573cadefbdd2ca90db42ad9eee8d7de75e74b474a2aa62048a151f57ed"
+        "version": "d3283c59cc1a31055d07548e587f3a37f5cd2e6d0dd0ee4ec3f30ccc9a644036",
+        "signature": "5e29fba51acbd16e99fe2056a30091ff8cfc8161e82b16e19bb428d14b706ff5"
       },
       "./src/repositories/index.ts": {
         "version": "e63196dffc0989c4c613b193f810404e1f552fd592027e308738e1abfe2d6824",
         "signature": "e63196dffc0989c4c613b193f810404e1f552fd592027e308738e1abfe2d6824"
       },
       "./src/services/tv-shows.service.ts": {
-        "version": "2427967fcb1c2f57374f07018309fbd88420d836129fb5a095c16c3fd6b93e89",
-        "signature": "9520369cb67e4f25a1322d8a22db4d0da83d9c7ca83a1fd182b08bc1a1d8e1f8"
+        "version": "6ff520ac90eac2d649cb6762ec4ddc12b85aed0784927326d285f552461f4cf8",
+        "signature": "5b5f64631a1ac9ddce872b645049ee9c609b4e8fab6f032b9cc4ec0e8c4f04e6"
       },
       "./src/services/drafts.service.ts": {
         "version": "6878fd79f948ac94bd24b53645de88a3472ca01507850a099dbd9c2319b3394c",
@@ -2737,6 +2749,10 @@
         "version": "6055ac126cf1a6c818330d033eb3e99df5070a598359fe30c430f844dafac7ce",
         "signature": "6055ac126cf1a6c818330d033eb3e99df5070a598359fe30c430f844dafac7ce"
       },
+      "../../../../../../node_modules/@types/graceful-fs/index.d.ts": {
+        "version": "2c7dca525f4e2e5f2b357dacb58ab6c8777995e6d505ef652bcbbf9789ac558f",
+        "signature": "2c7dca525f4e2e5f2b357dacb58ab6c8777995e6d505ef652bcbbf9789ac558f"
+      },
       "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": {
         "version": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89",
         "signature": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89"
@@ -2748,6 +2764,10 @@
       "../../../../../../node_modules/@types/node-fetch/index.d.ts": {
         "version": "f51382950fa81e3a54e9fd9f343fe583cfbb221f15a51936e12411699347effe",
         "signature": "f51382950fa81e3a54e9fd9f343fe583cfbb221f15a51936e12411699347effe"
+      },
+      "../../../../../../node_modules/@types/normalize-package-data/index.d.ts": {
+        "version": "c9ad058b2cc9ce6dc2ed92960d6d009e8c04bef46d3f5312283debca6869f613",
+        "signature": "c9ad058b2cc9ce6dc2ed92960d6d009e8c04bef46d3f5312283debca6869f613"
       },
       "../../../../../../node_modules/@types/prettier/index.d.ts": {
         "version": "29651525db5579157e617c77e869af8bfdc1130f5d811c1f759ad35b7bafc8ef",
@@ -4779,6 +4799,10 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
+      "./src/models/tvshowstate.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
       "./src/models/tv-show-short-info.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
@@ -6463,6 +6487,21 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
+      "./src/models/network-type.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "./src/models/network.ts": [
+        "./src/models/network-type.ts",
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "./src/models/tv-show-search-result.ts": [
+        "./src/models/network.ts",
+        "./src/models/tvshowstate.ts",
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
       "./src/models/pagination-metadata.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
@@ -6486,6 +6525,7 @@
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
       "./src/models/dtos/tv-show-poster.dto.ts": [
+        "./src/models/network.ts",
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -6504,25 +6544,26 @@
       ],
       "./src/models/index.ts": [
         "./src/models/filters.ts",
+        "./src/models/tvshowstate.ts",
         "./src/models/tv-show-short-info.ts",
         "./src/models/product.ts",
+        "./src/models/network.ts",
+        "./src/models/tv-show-search-result.ts",
         "./src/models/pagination-metadata.ts",
         "./src/models/sorting-params.ts",
         "./src/models/pagination-params.ts",
         "./src/models/results-with-pagination.ts",
         "./src/models/sponsored-tv-shows-lists.ts",
         "./src/models/ordering-mode.ts",
+        "./src/models/network-type.ts",
         "./src/models/dtos/tv-show-suggestion.dto.ts",
         "./src/models/dtos/tv-show.dto.ts",
         "./src/models/dtos/tv-show-poster.dto.ts",
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
-      "./src/models/tvshowstate.ts": [
-        "./node_modules/@types/node/base.d.ts",
-        "./node_modules/@types/node/ts3.2/index.d.ts"
-      ],
       "./src/entities/tv-show.entity.ts": [
+        "./src/models/network.ts",
         "./src/models/tvshowstate.ts",
         "./node_modules/typeorm/index.d.ts",
         "./src/models/index.ts",
@@ -6616,6 +6657,7 @@
         "./src/models/dtos/tv-show-poster.dto.ts",
         "./src/repositories/mongo-repository-manager.ts",
         "../../node_modules/@nestjs/common/index.d.ts",
+        "./src/models/tv-show-search-result.ts",
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -6641,6 +6683,7 @@
         "./src/models/sorting-params.ts",
         "./src/models/tv-show-short-info.ts",
         "./src/repositories/index.ts",
+        "./src/models/tv-show-search-result.ts",
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -7161,6 +7204,10 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
+      "../../../../../../node_modules/@types/graceful-fs/index.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
       "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
@@ -7173,6 +7220,10 @@
         "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts",
         "./node_modules/@types/node/base.d.ts",
         "../../../../../../node_modules/@types/node-fetch/externals.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/normalize-package-data/index.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
       "../../../../../../node_modules/@types/prettier/index.d.ts": [
@@ -7554,9 +7605,10 @@
       ],
       "./src/services/tv-shows.service.ts": [
         "./src/repositories/index.ts",
-        "../../node_modules/rxjs/index.d.ts",
-        "./src/entities/index.ts",
         "./src/models/pagination-params.ts",
+        "../../node_modules/rxjs/index.d.ts",
+        "./src/models/tv-show-search-result.ts",
+        "./src/entities/index.ts",
         "./src/models/filters.ts",
         "./src/models/sorting-params.ts",
         "./src/models/dtos/tv-show-poster.dto.ts",
@@ -7570,6 +7622,7 @@
         "../../node_modules/rxjs/index.d.ts",
         "./src/models/dtos/tv-show-suggestion.dto.ts",
         "./src/models/index.ts",
+        "./src/models/tv-show-search-result.ts",
         "./src/models/dtos/tv-show-poster.dto.ts"
       ],
       "./src/repositories/index.ts": [
@@ -9483,14 +9536,18 @@
       ],
       "./src/models/index.ts": [
         "./src/models/filters.ts",
+        "./src/models/tvshowstate.ts",
         "./src/models/tv-show-short-info.ts",
         "./src/models/product.ts",
+        "./src/models/network.ts",
+        "./src/models/tv-show-search-result.ts",
         "./src/models/pagination-metadata.ts",
         "./src/models/sorting-params.ts",
         "./src/models/pagination-params.ts",
         "./src/models/results-with-pagination.ts",
         "./src/models/sponsored-tv-shows-lists.ts",
         "./src/models/ordering-mode.ts",
+        "./src/models/network-type.ts",
         "./src/models/dtos/tv-show-suggestion.dto.ts",
         "./src/models/dtos/tv-show.dto.ts",
         "./src/models/dtos/tv-show-poster.dto.ts"
@@ -9498,6 +9555,7 @@
       "./src/entities/tv-show.entity.ts": [
         "./node_modules/typeorm/index.d.ts",
         "./src/models/tvshowstate.ts",
+        "./src/models/network.ts",
         "./src/models/index.ts"
       ],
       "./src/entities/index.ts": [
@@ -9507,6 +9565,10 @@
       "./src/entities/draft.entity.ts": [
         "./node_modules/typeorm/index.d.ts",
         "./src/entities/tv-show.entity.ts"
+      ],
+      "./src/models/tv-show-search-result.ts": [
+        "./src/models/tvshowstate.ts",
+        "./src/models/network.ts"
       ],
       "./node_modules/reflect-metadata/index.d.ts": [
         "./node_modules/@types/node/base.d.ts",
@@ -11183,14 +11245,20 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
+      "./src/models/network.ts": [
+        "./src/models/network-type.ts"
+      ],
+      "./src/models/dtos/tv-show-poster.dto.ts": [
+        "./src/models/network.ts"
+      ],
+      "./src/models/sponsored-tv-shows-lists.ts": [
+        "./src/models/dtos/tv-show-poster.dto.ts"
+      ],
       "./src/models/results-with-pagination.ts": [
         "./src/models/pagination-metadata.ts"
       ],
       "./src/models/sorting-params.ts": [
         "./src/models/ordering-mode.ts"
-      ],
-      "./src/models/sponsored-tv-shows-lists.ts": [
-        "./src/models/dtos/tv-show-poster.dto.ts"
       ],
       "./node_modules/@types/node/inspector.d.ts": [
         "./node_modules/@types/node/base.d.ts",
@@ -11209,6 +11277,10 @@
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
+      "../../../../../../node_modules/@types/normalize-package-data/index.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
       "../../../../../../node_modules/@types/node-fetch/index.d.ts": [
         "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts",
         "./node_modules/@types/node/base.d.ts",
@@ -11220,6 +11292,10 @@
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
       "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts": [
+        "./node_modules/@types/node/base.d.ts",
+        "./node_modules/@types/node/ts3.2/index.d.ts"
+      ],
+      "../../../../../../node_modules/@types/graceful-fs/index.d.ts": [
         "./node_modules/@types/node/base.d.ts",
         "./node_modules/@types/node/ts3.2/index.d.ts"
       ],
@@ -11772,6 +11848,7 @@
       "../../node_modules/rxjs/internal/operators/zipall.d.ts",
       "../../node_modules/rxjs/operators/index.d.ts",
       "./src/models/filters.ts",
+      "./src/models/tvshowstate.ts",
       "./src/models/tv-show-short-info.ts",
       "./node_modules/reflect-metadata/index.d.ts",
       "./node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts",
@@ -12020,6 +12097,9 @@
       "./node_modules/typeorm/util/promiseutils.d.ts",
       "./node_modules/typeorm/index.d.ts",
       "./src/models/product.ts",
+      "./src/models/network-type.ts",
+      "./src/models/network.ts",
+      "./src/models/tv-show-search-result.ts",
       "./src/models/pagination-metadata.ts",
       "./src/models/ordering-mode.ts",
       "./src/models/sorting-params.ts",
@@ -12030,7 +12110,6 @@
       "./src/models/dtos/tv-show-suggestion.dto.ts",
       "./src/models/dtos/tv-show.dto.ts",
       "./src/models/index.ts",
-      "./src/models/tvshowstate.ts",
       "./src/entities/tv-show.entity.ts",
       "./src/entities/draft.entity.ts",
       "./src/entities/index.ts",
@@ -12133,9 +12212,11 @@
       "../../node_modules/@types/webpack/index.d.ts",
       "../../node_modules/@types/yargs-parser/index.d.ts",
       "../../node_modules/@types/yargs/index.d.ts",
+      "../../../../../../node_modules/@types/graceful-fs/index.d.ts",
       "../../../../../../node_modules/@types/node-fetch/node_modules/form-data/index.d.ts",
       "../../../../../../node_modules/@types/node-fetch/externals.d.ts",
       "../../../../../../node_modules/@types/node-fetch/index.d.ts",
+      "../../../../../../node_modules/@types/normalize-package-data/index.d.ts",
       "../../../../../../node_modules/@types/prettier/index.d.ts",
       "../../../../../../node_modules/@types/tunnel/index.d.ts",
       "../../node_modules/typescript/lib/lib.es2015.d.ts",

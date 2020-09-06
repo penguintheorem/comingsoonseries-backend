@@ -17,6 +17,7 @@ import {
 import { TvShowPoster } from '../models/dtos/tv-show-poster.dto';
 import { MongoRepositoryManager } from './mongo-repository-manager';
 import { Injectable } from '@nestjs/common';
+import { TvShowSearchResult } from '../models/tv-show-search-result';
 
 @Injectable()
 export class TvShowRepository {
@@ -57,7 +58,7 @@ export class TvShowRepository {
           repo.find({
             where: { title: new RegExp(sanitize(searchTerm), 'i') },
             order: { imdb_average_rank: 'DESC' },
-            take: 20,
+            take: 10,
           })
         )
       ),
@@ -78,7 +79,7 @@ export class TvShowRepository {
             select: ['id', 'title'],
             where: { title: new RegExp(sanitize(searchTerm), 'i') },
             order: { imdb_average_rank: 'DESC' },
-            take: 20,
+            take: 8,
           })
         )
       ),
@@ -86,6 +87,37 @@ export class TvShowRepository {
         tvShows.map(tvShow => ({
           id: tvShow.id.toString(),
           title: tvShow.title,
+        }))
+      )
+    );
+  }
+
+  // basically for the mvp
+  search(query?: string, paginationParams?: PaginationParams): Observable<TvShowSearchResult[]> {
+    const { page, size } = paginationParams;
+
+    return this._manager.getRepository<TvShow>(TvShow).pipe(
+      switchMap(repo =>
+        from(
+          repo.find({
+            ...(paginationParams && { skip: page * size, take: size }),
+            where: {
+              ...(query && { title: new RegExp(`.*${query}.*`, 'i') }),
+            },
+            order: {
+              next_release_date: 'DESC',
+            },
+          })
+        )
+      ),
+      map((tvShows: TvShow[]) =>
+        tvShows.map((tvShow: TvShow) => ({
+          title: tvShow.title,
+          coverImageUrl: tvShow.cover,
+          currentSeasonNumber: tvShow.currentSeason,
+          state: tvShow.currentState,
+          nextReleaseDate: tvShow.next_release_date,
+          networks: tvShow.networks,
         }))
       )
     );

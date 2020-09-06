@@ -33,6 +33,7 @@
     "@nestjs/platform-express": "^7.1.2",
     "@nestjs/passport": "^7.0.0",
     "@nestjs/swagger": "^3.1.0",
+    "@nestjs/jwt": "^7.0.0",
     "swagger-ui-express": "^4.1.2",
     "dotenv": "^8.2.0",
     "helmet": "^3.21.3"

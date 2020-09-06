@@ -1,5 +1,5 @@
 export enum TvShowState {
-  ENDED,
-  IN_PROGRESS,
-  NEW_SEASON_COMING,
+  inProgress = 'In progress',
+  ended = 'Ended',
+  suspended = 'Suspended',
 }
