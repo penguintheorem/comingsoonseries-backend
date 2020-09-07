@@ -17,7 +17,6 @@ export class MongoRepositoryManager extends RepositoryManager {
   getRepository<T>(entity: string | Function): Observable<Repository<T>> {
     return RepositoryManager.getConnection().pipe(
       map(connection => connection.getMongoRepository(entity)),
-      tap(repo => console.log('repo: ', repo)),
     ) as Observable<Repository<T>>;
   }
 }

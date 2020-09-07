@@ -1,7 +1,9 @@
+import { map } from 'rxjs/operators';
+import { TvShowShortInfo } from './../../../core/src/models/tv-show-short-info';
 import { TvShowsService } from '@comingsoonseries/core/services';
 import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { Observable } from 'rxjs';
-import { TvShowPoster } from '@comingsoonseries/core/models';
+import { TvShowPoster, TvShowSearchResult } from '@comingsoonseries/core/models';
 import {
   PaginationParams,
   SponsoredTvShowsLists,
@@ -15,6 +17,27 @@ import { TvShow } from '@comingsoonseries/core/entities';
 @Controller('tv-shows')
 export class TvShowsController {
   constructor(private readonly tvShowsService: TvShowsService) {}
+
+  @Get('search')
+  // just for test the auth but free users access without problems to this
+  // @UseGuards(AuthGuard('jwt'))
+  search(@Query() query): Observable<TvShowSearchResult[]> {
+    // pagination
+    const { page, size }: PaginationParams = query;
+    // filtering
+    const { q } = query;
+
+    return this.tvShowsService.search(q, { page: +page, size: +size });
+  }
+
+  @Get('suggestions')
+  getTvShowSuggestions(@Query() query): Observable<TvShowShortInfo[]> {
+    const { q } = query;
+
+    return this.tvShowsService.getTvShowShortInfos(q).pipe(map(infos => infos.slice(0, 10)));
+  }
+
+  // mvp
 
   @Get('posters')
   // just for test the auth but free users access without problems to this
@@ -30,7 +53,7 @@ export class TvShowsController {
     return this.tvShowsService.getTvShowPosters(
       { page: +page, size: +size },
       { title, genres: genres ? (genres as string).split(',') : undefined },
-      { sort },
+      { sort }
     );
   }
 
@@ -45,25 +68,22 @@ export class TvShowsController {
     });
   }
 
-  @Get('suggestions')
-  getTvShowSuggestions(@Query() query): Observable<TvShowSuggestion[]> {
-    const { q } = query;
-
-    return this.tvShowsService.getSuggestions(q);
-  }
-
   @Get(':tvShowId')
-  getTvShow(
-    @Param() urlSegmentParams: { tvShowId: string },
-  ): Observable<TvShow> {
+  getTvShow(@Param() urlSegmentParams: { tvShowId: string }): Observable<TvShow> {
     return this.tvShowsService.find(urlSegmentParams.tvShowId);
   }
 
   @Get(':tvShowId/products')
   getProducts(
     @Param() urlSegmentParams: { tvShowId: string },
-  ): Observable<Product[]> {
-    return this.tvShowsService.getProducts(urlSegmentParams.tvShowId);
+    @Query() query
+  ): Observable<{
+    items: Product[];
+    metadata: { count: number; size: number };
+  }> {
+    const { limit, offset } = query;
+
+    return this.tvShowsService.getProducts(urlSegmentParams.tvShowId, +limit, +offset);
   }
 
   // back-office (small for now)
@@ -75,7 +95,7 @@ export class TvShowsController {
   @Put(':tvShowId')
   update(
     @Param() urlSegmentParams: { tvShowId: string },
-    @Body() tvShow: TvShow,
+    @Body() tvShow: TvShow
   ): Observable<TvShow> {
     return this.tvShowsService.update(urlSegmentParams.tvShowId, tvShow);
   }

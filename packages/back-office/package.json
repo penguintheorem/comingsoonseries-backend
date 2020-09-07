@@ -1,0 +1,55 @@
+{
+  "name": "back-office",
+  "version": "1.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "Attilio Urbani <attiliourb@gmail.com>",
+  "license": "ISC",
+  "directories": {
+    "test": "__tests__"
+  },
+  "main": "dist/main",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./dist && rm -rf tsconfig.build.tsbuildinfo",
+    "compile": "tsc -b tsconfig.build.json",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main"
+  },
+  "dependencies": {
+    "@comingsoonseries/auth": "^1.0.0",
+    "@comingsoonseries/core": "^1.0.0",
+    "@nestjs/core": "^7.0.0",
+    "@nestjs/passport": "^7.0.0",
+    "@nestjs/platform-socket.io": "^7.0.0",
+    "@nestjs/platform-express": "^7.0.0",
+    "@nestjs/websockets": "^7.0.0",
+    "@nestjs/swagger": "^3.1.0",
+    "@nestjs/jwt": "^7.0.0",
+    "passport": "^0.4.1",
+    "jwks-rsa": "^1.7.0",
+    "passport-jwt": "^4.0.0",
+    "aws-sdk": "^2.652.0",
+    "dotenv": "^8.2.0",
+    "helmet": "^3.21.3",
+    "swagger-ui-express": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/socket.io": "^2.1.8",
+    "@types/passport-jwt": "3.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/penguintheorem/comingsoonseries-backend/issues"
+  },
+  "homepage": "https://github.com/penguintheorem/comingsoonseries-backend#readme"
+}

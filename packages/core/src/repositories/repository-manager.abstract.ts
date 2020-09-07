@@ -20,7 +20,6 @@ export abstract class RepositoryManager {
 
   private static createConnection(): Observable<Connection> {
     return from(createConnection(ormconfig)).pipe(
-      tap(connection => console.log('connection: ', connection)),
       tap(connection => (RepositoryManager._connection = connection)),
     );
   }

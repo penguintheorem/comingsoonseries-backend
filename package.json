@@ -5,10 +5,11 @@
     "clean": "rm -rf node_modules && lerna clean",
     "init": "npm run clean && npm install && lerna bootstrap",
     "build": "lerna run build",
-    "api": "lerna run --scope @comingsoonseries/api start:dev"
+    "api": "npm run build && cd packages/api && npm run start:debug",
+    "bo": "npm run build && cd packages/back-office && npm run start:debug"
   },
   "dependencies": {
-    "@nestjs/common": "^6.11.8",
+    "@nestjs/common": "^7.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.4"
   },

@@ -12,18 +12,15 @@ export class AuthService {
   constructor(private auth0Service: Auth0Service) {}
 
   signIn(user: User): Observable<GetTokenResponse> {
-    console.log('sign-in user: ', user);
     return this.auth0Service.getToken(user).pipe(
       catchError(error => {
         return throwError(ErrorUtils.formatAuth0Exception(error));
       }),
-      tap(response => console.log(`the sign-in is fucking successful`)),
       map(response => response.data),
     );
   }
 
   signUp(user: User): Observable<string | undefined> {
-    console.log('sign-up user: ', user);
     return this.auth0Service.signUp(user).pipe(
       map(response => response.data),
       switchMap((signUpResponse: SignUpResponse) =>
@@ -34,9 +31,7 @@ export class AuthService {
             )
           : of(undefined),
       ),
-      tap(response => console.log(`the sign-up is fucking successful`)),
       catchError(error => {
-        console.log('error: ', error);
         return throwError(ErrorUtils.formatAuth0Exception(error));
       }),
     );

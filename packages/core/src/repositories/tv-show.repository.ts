@@ -12,10 +12,12 @@ import {
   OrderingMode,
   Product,
   TvShowDTO,
+  TvShowShortInfo,
 } from '../models';
 import { TvShowPoster } from '../models/dtos/tv-show-poster.dto';
 import { MongoRepositoryManager } from './mongo-repository-manager';
 import { Injectable } from '@nestjs/common';
+import { TvShowSearchResult } from '../models/tv-show-search-result';
 
 @Injectable()
 export class TvShowRepository {
@@ -24,7 +26,7 @@ export class TvShowRepository {
   add(tvShow: TvShow): Observable<TvShow> {
     return this._manager.getRepository<TvShow>(TvShow).pipe(
       switchMap(repo => from(repo.save(tvShow))),
-      map(() => tvShow),
+      map(() => tvShow)
     );
   }
 
@@ -36,10 +38,8 @@ export class TvShowRepository {
    */
   find(tvShowId: string): Observable<TvShow> {
     return this._manager.getRepository<TvShow>(TvShow).pipe(
-      switchMap(repo =>
-        from(repo.find({ where: { _id: new ObjectId(tvShowId) } })),
-      ),
-      map(tvShows => tvShows[0]),
+      switchMap(repo => from(repo.find({ where: { _id: new ObjectId(tvShowId) } }))),
+      map(tvShows => tvShows[0])
     );
   }
 
@@ -58,18 +58,75 @@ export class TvShowRepository {
           repo.find({
             where: { title: new RegExp(sanitize(searchTerm), 'i') },
             order: { imdb_average_rank: 'DESC' },
-            take: 20,
-          }),
-        ),
+            take: 10,
+          })
+        )
       ),
-      map((tvShows: TvShow[]) => this.toTvShowSuggestions(tvShows)),
+      map((tvShows: TvShow[]) => this.toTvShowSuggestions(tvShows))
+    );
+  }
+
+  /**
+   * Gets just id and title of tv shows
+   *
+   * @param searchTerm - Search term to use to implement the regex
+   */
+  getTvShowsShortInfo(searchTerm: string): Observable<TvShowShortInfo[]> {
+    return this._manager.getRepository<TvShow>(TvShow).pipe(
+      switchMap(repo =>
+        from(
+          repo.find({
+            select: ['id', 'title'],
+            where: { title: new RegExp(sanitize(searchTerm), 'i') },
+            order: { imdb_average_rank: 'DESC' },
+            take: 8,
+          })
+        )
+      ),
+      map(tvShows =>
+        tvShows.map(tvShow => ({
+          id: tvShow.id.toString(),
+          title: tvShow.title,
+        }))
+      )
+    );
+  }
+
+  // basically for the mvp
+  search(query?: string, paginationParams?: PaginationParams): Observable<TvShowSearchResult[]> {
+    const { page, size } = paginationParams;
+
+    return this._manager.getRepository<TvShow>(TvShow).pipe(
+      switchMap(repo =>
+        from(
+          repo.find({
+            ...(paginationParams && { skip: page * size, take: size }),
+            where: {
+              ...(query && { title: new RegExp(`.*${query}.*`, 'i') }),
+            },
+            order: {
+              next_release_date: 'DESC',
+            },
+          })
+        )
+      ),
+      map((tvShows: TvShow[]) =>
+        tvShows.map((tvShow: TvShow) => ({
+          title: tvShow.title,
+          coverImageUrl: tvShow.cover,
+          currentSeasonNumber: tvShow.currentSeason,
+          state: tvShow.currentState,
+          nextReleaseDate: tvShow.next_release_date,
+          networks: tvShow.networks,
+        }))
+      )
     );
   }
 
   getTvShowPosters(
     paginationParams: PaginationParams,
     filters: Filters,
-    sortingParams: SortingParams,
+    sortingParams: SortingParams
   ): Observable<TvShowPoster[]> {
     const { page, size } = paginationParams;
     const { sort } = sortingParams;
@@ -77,7 +134,6 @@ export class TvShowRepository {
     const ordering = 'DESC';
 
     return this._manager.getRepository<TvShow>(TvShow).pipe(
-      tap(repo => console.log('connection established')),
       switchMap(repo =>
         from(
           repo.find({
@@ -110,10 +166,10 @@ export class TvShowRepository {
                 }),
               },
             }),
-          }),
-        ),
+          })
+        )
       ),
-      map((tvShows: TvShow[]) => this.toTvShowGridItems(tvShows)),
+      map((tvShows: TvShow[]) => this.toTvShowGridItems(tvShows))
     );
   }
 
@@ -123,70 +179,56 @@ export class TvShowRepository {
    * @param tvShowId - The id to use for the research
    * @returns An Observable that emits the products associated to the `tvShow` found by the input id or `undefined`
    */
-  getProducts(tvShowId: string): Observable<Product[]> {
+  getProducts(
+    tvShowId: string,
+    limit: number,
+    offset: number
+  ): Observable<{
+    items: Product[];
+    metadata: { count: number; size: number };
+  }> {
     return this.find(tvShowId).pipe(
-      map(tvShow => (tvShow ? tvShow.products : undefined)),
+      map(tvShow =>
+        tvShow
+          ? {
+              items: tvShow.products.slice(offset, limit),
+              metadata: {
+                count: tvShow.products.length,
+                size: tvShow.products.slice(offset, limit).length,
+              },
+            }
+          : undefined
+      )
     );
   }
 
   /**
+   * Partially update a tv show finding it by id
    *
-   * @param tvShowId
-   * @param newTvShow
+   * @param tvShowId - Tv show id
+   * @param newTvShow - Tv show object to use to update the existing one
    */
   update(tvShowId: string, newTvShow: TvShow): Observable<TvShow> {
     return this._manager.getRepository<TvShow>(TvShow).pipe(
-      switchMap(tvShowRepository =>
-        tvShowRepository.update(tvShowId, newTvShow),
-      ),
-      map((updateResult: UpdateResult) => updateResult[0] as TvShow),
+      switchMap(repo => repo.update(tvShowId, newTvShow)),
+      map((updateResult: UpdateResult) => newTvShow)
     );
   }
 
-  // TODO: make params optional
-  /**
-   *
-   * @param paginationParams
-   * @param filters
-   * @param sortingParams
-   */
-  // list(
-  //   paginationParams: PaginationParams,
-  //   filters: Filters,
-  //   sortingParams: SortingParams
-  // ): Observable<TvShow[]> {
-  //   const { page, size } = paginationParams;
-  //   const { ordering, latest, rank, popularity } = sortingParams;
-  //   const { title, genres, isAdult, ended } = filters;
+  addFromDto(tvShowDTO: TvShowDTO): void {
+    this.add(this.getEntityFromDTO(tvShowDTO));
+  }
 
-  //   return this._manager.getRepository<TvShow>(TvShow).pipe(
-  //     switchMap((repo: Repository<TvShow>) => {
-  //       return from(
-  //         repo.find({
-  //           // pagination
-  //           ...(paginationParams && { skip: page * +size, take: size }),
-  //           // filtering
-  //           where: {
-  //             ...(title && { title: new RegExp(`.*${title}.*`, 'i') }),
-  //             ...(genres && { genres }),
-  //             // TODO: please, take a decision on that
-  //             // ...(isAdult && { isAdult }),
-  //             // TODO: to implement this
-  //             //...(ended && { ended: true }),
-  //           },
-  //           // sorting
-  //           ...(sortingParams && {
-  //             order: {
-  //               ...(latest && { next_release_date: ordering }),
-  //               ...(rank && { imdb_average_rank: ordering }),
-  //               ...(popularity && { countLists: ordering }),
-  //             },
-  //           }),
-  //         })
-  //       );
-  //     })
-  //   );
-  // }
+  async load(tvShowDTOs: TvShowDTO[]): Promise<void> {
+    try {
+      const c = await getConnection();
+      const repo = c.getRepository(TvShow);
+
+      await repo.save(this.getEntitiesFromDTOs(tvShowDTOs));
+    } catch (e) {
+      console.error(`err: ${e}`);
+    }
+  }
 
   /**
    *
@@ -240,22 +282,7 @@ export class TvShowRepository {
     return tvShow;
   }
 
-  addFromDto(tvShowDTO: TvShowDTO): void {
-    this.add(this.getEntityFromDTO(tvShowDTO));
-  }
-
-  async load(tvShowDTOs: TvShowDTO[]): Promise<void> {
-    try {
-      const c = await getConnection();
-      const repo = c.getRepository(TvShow);
-
-      await repo.save(this.getEntitiesFromDTOs(tvShowDTOs));
-    } catch (e) {
-      console.error(`err: ${e}`);
-    }
-  }
-
-  private getEntitiesFromDTOs(tvShowDTOs: TvShowDTO[]): TvShow[] {
+  getEntitiesFromDTOs(tvShowDTOs: TvShowDTO[]): TvShow[] {
     return tvShowDTOs.map(this.getEntityFromDTO);
   }
 }

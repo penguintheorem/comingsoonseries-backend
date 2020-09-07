@@ -1,3 +1,4 @@
+import { Draft } from './entities/draft.entity';
 import { TvShow } from './entities/tv-show.entity';
 // this will take parameters from the container (e.g. process.env)
 export const ormconfig: any = {
@@ -10,5 +11,5 @@ export const ormconfig: any = {
   password: encodeURIComponent('w&37Vom8LNGmr#76'),
   synchronize: true,
   logging: false,
-  entities: [TvShow],
+  entities: [TvShow, Draft],
 };

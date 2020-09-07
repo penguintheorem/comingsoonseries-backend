@@ -31,8 +31,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   };
 
   constructor() {
-    console.log('process.env.AUTH0_AUDIENCE: ', process.env.AUTH0_AUDIENCE);
-    console.log('process.env.AUTH0_DOMAIN: ', process.env.AUTH0_DOMAIN);
     super({
       secretOrKeyProvider: passportJwtSecret({
         cache: true, // @REVIEW
@@ -59,7 +57,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
    * @param payload
    */
   validate(payload: any) {
-    console.log('fucking validation process: ', payload);
     return payload;
   }
 }

@@ -27,9 +27,12 @@
     "@types/node": "^8.0.29"
   },
   "dependencies": {
+    "@comingsoonseries/common": "^1.0.0",
+    "@nestjs/core": "^7.0.0",
     "mongo-sanitize": "^1.0.1",
     "mongodb": "^3.0.8",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "0.2.19"
+    "typeorm": "0.2.19",
+    "uuid": "^7.0.3"
   }
 }
